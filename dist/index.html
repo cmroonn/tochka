@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
+
 <body>
 
     <!-- Start content -->
@@ -21,20 +23,20 @@
         <header class="header" id="header">
             <div class="header__top">
                 <div class="container header__top-wrapper">
-                    <div class="header__top-nearest-delivery">
+                    <div class="d-flex header__top-nearest-delivery">
                         Ближайшая доставка:
-    
-                        <span id="nearDelivery">
+
+                        <span id="nearDelivery" class="dotted">
                             12:00
                         </span>
                     </div>
-    
+
                     <div class="header__top-contacts">
                         <a href="tel:8999999999" class="header__top-contacts-phone">
                             <img src="img/icons/phone_icon.svg" alt="phone-icon">
                             + 7 (066) 364 19 19
                         </a>
-    
+
                         <div class="header__top-contacts-socials">
                             <a href="#">
                                 <img src="img/icons/instagram_icon.svg" alt="instagram">
@@ -45,14 +47,14 @@
                     </div>
                 </div>
             </div>
-    
-    
+
+
             <div class="container">
                 <div class="header__menu">
                     <a href="#" class="header__menu-logo">
                         <img src="img/logo.svg" alt="tochka-market">
                     </a>
-    
+
                     <ul class="header__menu-nav">
                         <li>
                             <a href="#" class="header-menu-point">
@@ -60,25 +62,25 @@
                                 <img src="img/icons/arrow-down_icon.svg" alt="arrow">
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="header-menu-point">
                                 Новинки
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="header-menu-point">
                                 Акции
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="header-menu-point">
                                 Блог
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="header-menu-point">
                                 О доставке
@@ -93,7 +95,7 @@
                                 <img src="img/icons/favorites_icon.svg" alt="favorites">
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="header-menu-point">
                                 <img src="img/icons/cart_icon.svg" alt="cart">
@@ -103,7 +105,7 @@
                                 </span>
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="header-menu-point">
                                 <img src="img/icons/user_icon.svg" alt="user">
@@ -116,12 +118,66 @@
                     </a>
 
                 </div>
+
+                <div class="d-flex jc-between ai-center header__menu-mob">
+                    <a href="#" class="menu-btn">
+                        <span></span>
+                    </a>
+
+                    <a href="#" class="header__menu-logo">
+                        <img src="img/logo.svg" alt="tochka-market">
+                    </a>
+
+                    <a href="#" class="header-menu-point header__menu-search">
+                        <img src="img/icons/search_icon.svg" alt="search">
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="header__personal-mob">
+                <div class="container d-flex jc-between">
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/cat_icon.svg" alt="category">
+                        </div>
+                        Каталог
+                    </a>
+
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/favorites_icon.svg" alt="favorite">
+                        </div>
+                        Избранное
+                    </a>
+
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/cart_icon.svg" alt="category">
+
+                            <span class="header-menu-counter">
+                                99+
+                            </span>
+                        </div>
+                        Корзина
+
+
+                    </a>
+
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/user_icon.svg" alt="category">
+                        </div>
+                        Кабинет
+                    </a>
+                </div>
             </div>
         </header>
 
-        <div class="container">
 
-            <!-- Breadcrumbs -->
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs-wrapper container">
             <div class="breadcrumbs">
                 <ul class="d-flex ai-center breadcrumbs__list">
                     <li class="d-flex ai-center">
@@ -135,12 +191,13 @@
                     </li>
                 </ul>
             </div>
+        </div>
 
 
-            <!-- Cart content -->
-
+        <!-- Cart content -->
+        <div class="container cart-wrapper container-unset-mob">
             <div class="cart">
-                <div class="cart__checkout">
+                <div class="as-start cart__checkout">
                     <h2 class="subtitle">
                         Оформление заказа
                     </h2>
@@ -152,7 +209,7 @@
                                 Мин.заказ от 2,000 ₽
                             </span>
                         </div>
-                        
+
                         <div class="progress progress-min">
                             <div class="progress-active">
                             </div>
@@ -160,13 +217,13 @@
 
                         <div class="d-flex jc-between ai-center cart__checkout-progressbar-prompt">
                             <p>
-                                До минимального заказа осталось: 
+                                До минимального заказа осталось:
                                 <span>
                                     1,534 <span style="opacity: .8">₽</span>
                                 </span>
                             </p>
 
-                            <a href="#">
+                            <a href="#" class="dotted">
                                 Продолжить покупки
                             </a>
                         </div>
@@ -195,13 +252,13 @@
 
                         <div class="d-flex jc-between ai-center cart__checkout-progressbar-prompt">
                             <p>
-                                До бесплатной доставки осталось: 
+                                До бесплатной доставки осталось:
                                 <span>
                                     1,534 <span style="opacity: .8">₽</span>
                                 </span>
                             </p>
 
-                            <a href="#">
+                            <a href="#" class="dotted">
                                 Продолжить покупки
                             </a>
                         </div>
@@ -211,41 +268,48 @@
                     <!-- Products -->
 
                     <div class="cart__checkout-products">
+
                         <!-- Product -->
                         <div class="cart__checkout-product">
                             <div class="d-flex jc-between">
-                                <div class="d-flex ai-center">
+                                <div class="d-flex ai-center w-100">
                                     <div class="d-flex jc-center ai-center product-preview">
                                         <img src="img/image.png" alt="Ореховое молоко">
                                     </div>
-    
+
                                     <div class="product-info">
-                                        <h3>
-                                            Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
-                                        </h3>
-    
-                                        <div class="count-block">
-                                            <span>
-                                                <img src="img/icons/remove.svg" alt="remove">
-                                            </span>
-    
-                                            <span id="counter" class="count">
-                                                1
-                                            </span>
-    
-                                            <span>
-                                                <img src="img/icons/add_icon.svg" alt="add">
-                                            </span>
+                                        <div class="d-flex flex-column w-100 jc-between">
+                                            <div class="d-flex jc-between">
+                                                <h3>
+                                                    Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
+                                                </h3>
+
+                                                <a href="#">
+                                                    <img src="img/icons/remove_icon.svg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="d-flex jc-between">
+                                                <div class="count-block">
+                                                    <span>
+                                                        <img src="img/icons/remove.svg" alt="remove">
+                                                    </span>
+
+                                                    <span id="counter" class="count">
+                                                        1
+                                                    </span>
+
+                                                    <span>
+                                                        <img src="img/icons/add_icon.svg" alt="add">
+                                                    </span>
+                                                </div>
+
+                                                <p class="product-price">
+                                                    370 <span>₽</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="product-details">
-                                    <img src="img/icons/remove_icon.svg" alt="">
-
-                                    <p class="product-price">
-                                        370 <span>₽</span>
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -253,177 +317,198 @@
                         <!-- Product -->
                         <div class="cart__checkout-product">
                             <div class="d-flex jc-between">
-                                <div class="d-flex ai-center">
+                                <div class="d-flex ai-center w-100">
                                     <div class="d-flex jc-center ai-center product-preview">
                                         <img src="img/image.png" alt="Ореховое молоко">
                                     </div>
-    
+
                                     <div class="product-info">
-                                        <h3>
-                                            Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
-                                        </h3>
-    
-                                        <div class="count-block">
-                                            <span>
-                                                <img src="img/icons/remove.svg" alt="remove">
-                                            </span>
-    
-                                            <span id="counter" class="count">
-                                                1
-                                            </span>
-    
-                                            <span>
-                                                <img src="img/icons/add_icon.svg" alt="add">
-                                            </span>
+                                        <div class="d-flex flex-column w-100 jc-between">
+                                            <div class="d-flex jc-between">
+                                                <h3>
+                                                    Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
+                                                </h3>
+
+                                                <a href="#">
+                                                    <img src="img/icons/remove_icon.svg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="d-flex jc-between">
+                                                <div class="count-block">
+                                                    <span>
+                                                        <img src="img/icons/remove.svg" alt="remove">
+                                                    </span>
+
+                                                    <span id="counter" class="count">
+                                                        1
+                                                    </span>
+
+                                                    <span>
+                                                        <img src="img/icons/add_icon.svg" alt="add">
+                                                    </span>
+                                                </div>
+
+                                                <p class="product-price">
+                                                    370 <span>₽</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="product-details">
-                                    <img src="img/icons/remove_icon.svg" alt="">
-
-                                    <p class="product-price">
-                                        370 <span>₽</span>
-                                    </p>
-                                </div>
-                                
                             </div>
                         </div>
 
                         <!-- Product -->
                         <div class="cart__checkout-product">
                             <div class="d-flex jc-between">
-                                <div class="d-flex ai-center">
+                                <div class="d-flex ai-center w-100">
                                     <div class="d-flex jc-center ai-center product-preview">
                                         <img src="img/image.png" alt="Ореховое молоко">
                                     </div>
-    
+
                                     <div class="product-info">
-                                        <h3>
-                                            Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
-                                        </h3>
-    
-                                        <div class="count-block">
-                                            <span>
-                                                <img src="img/icons/remove.svg" alt="remove">
-                                            </span>
-    
-                                            <span id="counter" class="count">
-                                                1
-                                            </span>
-    
-                                            <span>
-                                                <img src="img/icons/add_icon.svg" alt="add">
-                                            </span>
+                                        <div class="d-flex flex-column w-100 jc-between">
+                                            <div class="d-flex jc-between">
+                                                <h3>
+                                                    Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
+                                                </h3>
+
+                                                <a href="#">
+                                                    <img src="img/icons/remove_icon.svg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="d-flex jc-between">
+                                                <div class="count-block">
+                                                    <span>
+                                                        <img src="img/icons/remove.svg" alt="remove">
+                                                    </span>
+
+                                                    <span id="counter" class="count">
+                                                        1
+                                                    </span>
+
+                                                    <span>
+                                                        <img src="img/icons/add_icon.svg" alt="add">
+                                                    </span>
+                                                </div>
+
+                                                <p class="product-price">
+                                                    370 <span>₽</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="product-details">
-                                    <img src="img/icons/remove_icon.svg" alt="">
-
-                                    <p class="product-price">
-                                        370 <span>₽</span>
-                                    </p>
-                                </div>
-                                
                             </div>
                         </div>
 
                         <!-- Product -->
                         <div class="cart__checkout-product">
                             <div class="d-flex jc-between">
-                                <div class="d-flex ai-center">
+                                <div class="d-flex ai-center w-100">
                                     <div class="d-flex jc-center ai-center product-preview">
                                         <img src="img/image.png" alt="Ореховое молоко">
                                     </div>
-    
+
                                     <div class="product-info">
-                                        <h3>
-                                            Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
-                                        </h3>
-    
-                                        <div class="count-block">
-                                            <span>
-                                                <img src="img/icons/remove.svg" alt="remove">
-                                            </span>
-    
-                                            <span id="counter" class="count">
-                                                1
-                                            </span>
-    
-                                            <span>
-                                                <img src="img/icons/add_icon.svg" alt="add">
-                                            </span>
+                                        <div class="d-flex flex-column w-100 jc-between">
+                                            <div class="d-flex jc-between">
+                                                <h3>
+                                                    Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
+                                                </h3>
+
+                                                <a href="#">
+                                                    <img src="img/icons/remove_icon.svg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="d-flex jc-between">
+                                                <div class="count-block">
+                                                    <span>
+                                                        <img src="img/icons/remove.svg" alt="remove">
+                                                    </span>
+
+                                                    <span id="counter" class="count">
+                                                        1
+                                                    </span>
+
+                                                    <span>
+                                                        <img src="img/icons/add_icon.svg" alt="add">
+                                                    </span>
+                                                </div>
+
+                                                <p class="product-price">
+                                                    370 <span>₽</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="product-details">
-                                    <img src="img/icons/remove_icon.svg" alt="">
-
-                                    <p class="product-price">
-                                        370 <span>₽</span>
-                                    </p>
-                                </div>
-                                
                             </div>
                         </div>
 
                         <!-- Product -->
                         <div class="cart__checkout-product">
                             <div class="d-flex jc-between">
-                                <div class="d-flex ai-center">
+                                <div class="d-flex ai-center w-100">
                                     <div class="d-flex jc-center ai-center product-preview">
                                         <img src="img/image.png" alt="Ореховое молоко">
                                     </div>
-    
+
                                     <div class="product-info">
-                                        <h3>
-                                            Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
-                                        </h3>
-    
-                                        <div class="count-block">
-                                            <span>
-                                                <img src="img/icons/remove.svg" alt="remove">
-                                            </span>
-    
-                                            <span id="counter" class="count">
-                                                1
-                                            </span>
-    
-                                            <span>
-                                                <img src="img/icons/add_icon.svg" alt="add">
-                                            </span>
+                                        <div class="d-flex flex-column w-100 jc-between">
+                                            <div class="d-flex jc-between">
+                                                <h3>
+                                                    Ореховое молоко из пекана «Mylk» Caramel ~ 400 мл.
+                                                </h3>
+
+                                                <a href="#">
+                                                    <img src="img/icons/remove_icon.svg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="d-flex jc-between">
+                                                <div class="count-block">
+                                                    <span>
+                                                        <img src="img/icons/remove.svg" alt="remove">
+                                                    </span>
+
+                                                    <span id="counter" class="count">
+                                                        1
+                                                    </span>
+
+                                                    <span>
+                                                        <img src="img/icons/add_icon.svg" alt="add">
+                                                    </span>
+                                                </div>
+
+                                                <p class="product-price">
+                                                    370 <span>₽</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="product-details">
-                                    <img src="img/icons/remove_icon.svg" alt="">
-
-                                    <p class="product-price">
-                                        370 <span>₽</span>
-                                    </p>
-                                </div>
-                                
                             </div>
                         </div>
                     </div>
 
 
                     <div class="cart__checkout-total d-flex jc-between">
-                        <div class="cart__checkout-warning d-flex jc-between">
+                        <div class="cart-warning d-flex jc-between">
                             <img src="img/icons/info_icon.svg" alt="info">
 
                             <p>
-                                Конечный вес продуктов может меняться после перезвешивания! Это может отразиться на конечной сумме заказа.
+                                Конечный вес продуктов может меняться после перезвешивания! Это может отразиться на
+                                конечной сумме заказа.
                             </p>
                         </div>
 
-                        <div class="total-payment">
+                        <div class="jc-between total-payment">
                             <span>
-                                Всего к оплате: 
+                                Всего к оплате:
                             </span>
 
                             <p class="total-payment-price">
@@ -442,21 +527,21 @@
 
                 <div class="cart__data">
 
-                    <div class="cart__data-personal">
+                    <div class="cart__data-block cart__data-personal">
                         <h2 class="subtitle">
                             Личные данные
                         </h2>
 
 
-                        <div class="cart__data-input-row">
+                        <div class="flex-column-mob cart__data-input-row">
                             <label class="cart-input">
                                 <div class="icon">
                                     <img src="img/icons/user_icon.svg" alt="user">
                                 </div>
                                 <input type="text" name="name" placeholder="Имя и фамилия">
                             </label>
-                            
-                            
+
+
                             <label class="cart-input">
                                 <div class="icon">
                                     <img src="img/icons/mail_icon.svg" alt="email">
@@ -472,13 +557,13 @@
                                 </div>
                                 <input type="tel" name="tel" placeholder="Телефон">
                             </label>
-                            
-                            
+
+
                             <label class="cart-input">
                                 <div class="icon">
                                     <img src="img/icons/ticket_icon.svg" alt="sms-code">
                                 </div>
-                                <input type="text" name="sms-code" placeholder="Код из SMSgit p">
+                                <input type="text" name="sms-code" placeholder="Код из SMS">
                             </label>
                         </div>
 
@@ -487,7 +572,7 @@
                                 Для авторизации введите код из SMS
                             </span>
 
-                            <a href="#" class="dotted">
+                            <a href="#" class="dotted color-gray">
                                 Отправить заново
                             </a>
                         </div>
@@ -497,18 +582,19 @@
                                 <div class="icon">
                                     <img src="img/icons/comment_icon.svg" alt="comment">
                                 </div>
-                                <textarea type="text" name="comment" placeholder="Здесь вы можете указать особенности заказа, пожелания и другое"></textarea>
+                                <textarea type="text" name="comment"
+                                    placeholder="Здесь вы можете указать особенности заказа, пожелания и другое"></textarea>
                             </label>
                         </div>
                     </div>
 
 
-                    <div class="cart__data-personal">
+                    <div class="cart__data-block cart__data-personal">
                         <h2 class="subtitle">
                             Адрес, способ и дата доставки
                         </h2>
 
-                        
+
                         <div class="cart__data-input-row">
                             <label class="cart-input cart-input-full">
                                 <div class="icon">
@@ -561,12 +647,12 @@
                         </div>
                     </div>
 
-                    
+
 
                     <!-- Date Picker -->
-                    <div class="cart__data-date">
+                    <div class="cart__data-block cart__data-date">
                         <h4>
-                            Покупки будут получены: 
+                            Покупки будут получены:
                         </h4>
 
                         <a href="#" id="date-picker" class="btn">
@@ -574,20 +660,314 @@
                         </a>
                     </div>
 
+                    <div class="d-flex flex-column cart__data-block">
+                        <!-- checkbox -->
+                        <label class="cart-checkbox">
+                            <input type="checkbox" value="Упаковать в личную ЭКО-сумку" name="eco-bag">
+
+                            <span class="d-flex flex-column">
+                                Упаковать покупки в личную ЭКО-сумку
+
+                                <a href="#" class="dotted color-gray" style="font-weight: 500;">
+                                    (Правила использования)
+                                </a>
+                            </span>
+                        </label>
+
+                        <!-- checkbox -->
+                        <label class="cart-checkbox">
+                            <input type="checkbox" value="Упаковать в личную ЭКО-сумку" name="eco-bag">
+
+                            <span class="d-flex flex-column">
+                                Отказаться от доставки и получить покупки при самовывозе из Велозаводского рынка
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="cart__data-block">
+                        <h2 class="subtitle">
+                            Способ оплаты
+                        </h2>
+
+                        <!-- radio -->
+                        <label class="cart-radio">
+                            <input type="radio" value="Упаковать в личную ЭКО-сумку" name="payment">
+
+                            <span class="d-flex flex-column">
+                                Наличными при получении
+                            </span>
+                        </label>
+
+                        <!-- radio -->
+                        <label class="cart-radio">
+                            <input type="radio" value="Упаковать в личную ЭКО-сумку" name="payment">
+
+                            <span class="d-flex flex-column">
+                                Безналичный платёж при получении
+                            </span>
+                        </label>
+
+                        <!-- radio -->
+                        <label class="cart-radio">
+                            <input type="radio" value="Упаковать в личную ЭКО-сумку" name="payment">
+
+                            <span class="d-flex flex-column">
+                                Наличными при получении
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="cart__data-block">
+                        <h2 class="subtitle">
+                            Промокод и скидки
+                        </h2>
+
+                        <div class="d-flex cart__data-promocode">
+                            <label class="cart-input">
+                                <div class="icon">
+                                    <img src="img/icons/ticket_icon.svg" alt="sms-code">
+                                </div>
+                                <input type="text" name="sms-code" placeholder="Промокод">
+                            </label>
+
+                            <a href="#" class="dotted color-gray">
+                                Применить
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cart__data-block">
+                        <!-- checkbox -->
+                        <label class="cart-checkbox">
+                            <input type="checkbox" value="Упаковать в личную ЭКО-сумку" name="eco-bag">
+
+                            <span class="d-flex flex-column">
+                                <p class="text-uppercase d-flex ai-center color-black" style="font-weight: 700;">
+                                    Получать e-mail рассылку
+                                    <img src="img/icons/mail_icon.svg" alt="email">
+                                </p>
+
+                                <p class="color-black">
+                                    Получайте персональные предложения скидки самые свежие новости и информацию об
+                                    акциях
+                                </p>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- divider -->
+                    <div class="dotted dotted-divider"></div>
+
+                    <div class="d-flex jc-between cart__data-block cart__data-pretotal">
+                        <div class="cart-warning d-flex jc-between">
+                            <img src="img/icons/info_icon.svg" alt="info">
+
+
+                            <div class="cart__data-pretotal-warning-text">
+                                <p>
+                                    Еще чуть-чуть и мы приедем беслпатно:
+                                    <span class="color-black">осталось 1,534</span> ₽
+                                </p>
+
+                                <a href="#" class="dotted color-gray fw-500">
+                                    Продолжить покупки
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column ai-end">
+                            <div class="total-payment">
+                                <span>
+                                    Сумма заказа
+                                </span>
+                                <p>
+                                    <span class="color-black cart__data-price ">
+                                        +15,980
+                                    </span>
+                                    ₽
+                                </p>
+                            </div>
+
+                            <div class="total-payment">
+                                <span>
+                                    Доставка
+                                </span>
+                                <p>
+                                    <span class="color-black cart__data-price ">
+                                        +580
+                                    </span>
+                                    ₽
+                                </p>
+                            </div>
+
+                            <div class="total-payment">
+                                <span>
+                                    Скидка
+                                </span>
+                                <p>
+                                    <span class="color-black cart__data-price ">
+                                        -3,196
+                                    </span>
+                                    ₽
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- divider -->
+                    <div class="dotted dotted-divider"></div>
+
+                    <div class="cart__data-block cart__data-total">
+                        <div class="d-flex jc-end">
+                            <div class="d-flex flex-column ai-end">
+                                <div class="total-payment">
+                                    <span>
+                                        Всего к оплате:
+                                    </span>
+                                    <p class="total-payment-price">
+                                        12,980 <span>₽</span>
+                                    </p>
+                                </div>
+
+
+                                <label class="cart-checkbox cart__data-total-checkbox">
+                                    <input type="checkbox" value="Согласие на обработку персональных данных"
+                                        name="personal-data-checkbox">
+
+                                    <span>
+                                        Я подтверждаю свое согласие с
+                                        <a href="#" class="dotted color-gray fw-700 text-uppercase">
+                                            Пользовательским соглашением
+                                        </a>
+                                    </span>
+                                </label>
+
+                                <button class="fw-300 text-uppercase btn cart__data-submit" type="submit">
+                                    Оформить заказ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 </div>
             </div>
 
-
-
-
         </div>
+
+
+        <footer class="footer" id="footer">
+            <div class="container footer-wrapper">
+                <div class="footer__row">
+                    <a href="/">
+                        <img src="img/logo.svg" alt="logo">
+                    </a>
+
+                    <a href="tel:89999999999" class="fw-300 footer-phone-desc">
+                        <img src="img/icons/phone_icon.svg" alt="phone">
+                        + 7 (066) 364 19 19
+                    </a>
+                </div>
+
+                <div class="jc-between footer__row">
+                    <div class="footer__menu-wrap">
+                        <ul class="footer__menu">
+                            <li>
+                                <a href="#">
+                                    Контакты
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    Доставка и оплата
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    Как вернуть или обменять
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    Программа лояльности
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer__menu">
+                            <li>
+                                <a href="#">
+                                    О проекте
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Сертификаты
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    Поставщикам
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Реквизиты
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer__menu">
+                            <li>
+                                <a href="#">
+                                    Эко инициативы
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    Фонд содействия развитию
+                                    сельского хозяйства
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    Для бизнеса
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__payment">
+                        <img src="img/footer-payment.svg" alt="payment-info">
+                    </div>
+
+
+                    <div class="footer__contacts">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+            </div>
+        </footer>
     </main>
 
 
 
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
