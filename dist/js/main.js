@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var getCurrentTime = function getCurrentTime() {
       var time = new Date(Date.now());
       var hours = time.getUTCHours();
-      hours += timezone;
       var minutes = time.getUTCMinutes();
       return hours + ":" + minutes;
     };
