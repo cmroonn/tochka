@@ -41,9 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   } // Set nearest delivery time 
 
   {
-    // get current time (default +3 / Moscow timezone)
+    // get current time
     var getCurrentTime = function getCurrentTime() {
-      var timezone = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
       var time = new Date(Date.now());
       var hours = time.getUTCHours();
       hours += timezone;
