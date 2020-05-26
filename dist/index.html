@@ -113,9 +113,17 @@
                         </li>
                     </ul>
 
-                    <a href="#" class="header-menu-point header__menu-search">
+                    <a href="#" class="header-menu-point header__menu-search" id="searchButton">
                         <img src="img/icons/search_icon.svg" alt="search">
                     </a>
+
+                    <form class="d-flex ai-center search-box" id="searchRow">
+                        <input type="search" placeholder="Поиск товаров">
+                        <div class="close-search" id="close-search"></div>
+                        <button type="submit">
+                            <img src="img/icons/search_icon.svg" alt="search">
+                        </button>
+                    </form>
 
                 </div>
 
@@ -953,20 +961,117 @@
 
 
                     <div class="footer__contacts">
-                        
+                        <div class="d-flex ai-center footer__contacts-socials">
+                            <a href="#">
+                                <img src="img/icons/instagram_icon.svg" alt="instagram">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/fb_icon.svg" alt="facebook">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/vk_icon.svg" alt="vk">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/yandex_dzen_icon.svg" alt="dzen">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/youtube_icon.svg" alt="youtube">
+                            </a>
+                        </div>
+
+                        <a href="#" class="fw-300 btn footer__question">
+                            Задать вопрос
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="container">
+            <div class="d-flex jc-between ai-center container footer__down">
+                <p class="footer__copy fw-300 color-gray">
+                    © Магазин ТОЧКА 2014-2019
+                </p>
 
+                <ul class="footer__privacy-links">
+                    <li>
+                        <a href="#" class="fw-300">
+                            Пользовательское соглашение
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="fw-300">
+                            Политика обработки персональных данных
+                        </a>
+                    </li>
+                </ul>
             </div>
         </footer>
     </main>
 
+    <div class="mobile-menu" id="mob-menu">
+        <ul class="d-flex flex-column ai-center mobile-nav">
+            <li>
+                <a href="#">
+                    Новости
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Акции
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Блог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    О доставке
+                </a>
+            </li>
+        </ul>
+
+        <div class="flex-column ai-center">
+            <a href="tel:8999999999" class="jc-center header__top-contacts-phone" style="margin-bottom: 20px;">
+                <img src="img/icons/phone_icon.svg" alt="phone-icon">
+                + 7 (066) 364 19 19
+            </a>
+
+            <div class="jc-center d-flex">
+                <a href="#">
+                    <img src="img/icons/instagram_icon.svg" alt="instagram">
+                    <img src="img/icons/fb_icon.svg" alt="facebook">
+                    <img src="img/icons/vk_icon.svg" alt="vkontakte">
+                </a>
+            </div>
+        </div>
+    </div>
 
 
+    <div class="d-flex ai-center jc-between notification-popup">
+        <div class="close-popup closePopup" id="closeNotification"></div>
+        <div>
+            <h2 class="subtitle">
+                Хотим чтобы вы знали.
+            </h2>
+            <p class="d-flex">
+                Просматривая этот сайт, вы соглашаетесь с нашей 
+                <a href="#" class="color-gray dotted text-uppercase fw-700">
+                    Политикой конфиденциальности
+                </a>
+            </p>
+        </div>
 
+        <a href="#" class="btn closePopup" id="privacySubmit">
+            Принять
+        </a>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js"></script>
+    <script src="js/timePicker.js"></script>
     <script src="js/main.js"></script>
 </body>
 
