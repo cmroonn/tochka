@@ -271,7 +271,8 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: {
         "Content-Type": "application/json",
         'Authorization': 'key=kPuqrIGUXhvl7ksomy9cOVnZNh2J',
-        'Origin': 'https://cmroonn.github.io/'
+        'Origin': 'https://cmroonn.github.io/',
+        'Referer': 'https://cmroonn.github.io/'
       },
       url: "https://fallgetell@gmail.com:kPuqrIGUXhvl7ksomy9cOVnZNh2J@gate.smsaero.ru/v2/sms/testsend?number=79091169019&text=Test+text&sign=BIZNES&channel=DIRECT",
       type: "POST",
