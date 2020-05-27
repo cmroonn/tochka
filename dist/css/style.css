@@ -709,6 +709,11 @@ textarea {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  .cart__checkout-product .count-block .count {
+    width: 60px;
+    text-align: center;
+    font-size: 22px;
+    border: none; }
   .cart__checkout-product .count-block span {
     font-size: 22px;
     color: #141414;
@@ -722,10 +727,8 @@ textarea {
     -ms-flex-align: center;
     align-items: center;
     cursor: pointer; }
-    .cart__checkout-product .count-block span.count {
-      opacity: 1;
-      margin: 0 30px;
-      cursor: default; }
+    .cart__checkout-product .count-block span:hover {
+      opacity: 1; }
 
 .cart__checkout-product .product-details {
   display: -webkit-box;
@@ -1009,6 +1012,34 @@ textarea {
     border: 2px solid #141414; }
   .cart-radio input:checked + span {
     color: #141414; }
+
+.cart__data-address {
+  position: relative; }
+
+.address_suggest {
+  position: absolute;
+  width: 100%;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+  bottom: -120px;
+  max-height: 120px;
+  display: none;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3); }
+  .address_suggest.show {
+    display: block; }
+  .address_suggest .address_suggest-item {
+    padding: 5px;
+    background: white;
+    cursor: pointer;
+    font-weight: 300; }
+    .address_suggest .address_suggest-item:hover {
+      background: rgba(20, 20, 20, 0.1);
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
 
 .cart__data-promocode a {
   margin-left: 20px; }

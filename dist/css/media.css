@@ -275,4 +275,11 @@
   .cart__data-total .total-payment span, .cart__data-total .total-payment a, .cart__checkout-total .total-payment span, .cart__checkout-total .total-payment a {
     font-size: 12px; }
   .cart__data-total .total-payment .total-payment-price, .cart__checkout-total .total-payment .total-payment-price {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .date-pick-time .time-item {
+    width: -webkit-calc((100% / 2) - 10px);
+    width: calc((100% / 2) - 10px); } }
+
+@media screen and (max-width: 425px) {
+  .notification-popup .notification-text p a {
+    font-size: 11px; } }

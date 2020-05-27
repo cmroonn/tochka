@@ -91,6 +91,19 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       datePicker.classList.add("show"); // show date picker
     });
+    datePicker.addEventListener("click", function (e) {
+      var target = e.target;
+      var children = datePicker.children;
+
+      if (target == datePicker) {
+        datePicker.classList.remove("show");
+      } // for(let i = 0; i < children.length; i++) {
+      //     if(target !== children[i]) {
+      //         datePicker.classList.remove("show");
+      //     }
+      // }
+
+    });
   } // Inputs validation 
 
   {
@@ -140,11 +153,58 @@ document.addEventListener("DOMContentLoaded", function () {
       validate();
 
       if (validate()) {
+        document.getElementById("err").style.display = "none";
         $.ajax({
           method: 'POST',
           url: "sender.php"
         });
+      } else {
+        document.getElementById("err").style.display = "block";
       }
+    });
+  }
+  {
+    var plus = document.querySelectorAll(".plusCount");
+    var minus = document.querySelectorAll(".minusCount");
+    plus.forEach(function (elem) {
+      elem.addEventListener("click", function () {
+        addItem(elem);
+      });
+    });
+    minus.forEach(function (elem) {
+      elem.addEventListener("click", function () {
+        removeItem(elem);
+      });
+    });
+
+    var addItem = function addItem(el) {
+      var value = parseInt(el.parentElement.children[1].value) + 1;
+      return el.parentElement.children[1].value = value;
+    };
+
+    var removeItem = function removeItem(el) {
+      var value = parseInt(el.parentElement.children[1].value) - 1;
+
+      if (value < 1) {
+        return false;
+      } else {
+        return el.parentElement.children[1].value = value;
+      }
+    };
+  }
+  {
+    var addressessWrapper = document.querySelector(".address_suggest");
+    var addresses = document.querySelectorAll(".address_suggest-item");
+    var input = document.querySelector(".cart__data input[name='address']");
+    input.addEventListener("click", function () {
+      addressessWrapper.classList.add("show");
+    });
+    addresses.forEach(function (address) {
+      address.addEventListener("click", function (e) {
+        var target = e.target.innerText;
+        input.value = target;
+        address.parentElement.classList.remove("show");
+      });
     });
   }
 });
