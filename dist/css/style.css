@@ -239,6 +239,13 @@ textarea {
 .menu-btn-active span::after {
   margin-left: -16px; }
 
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white; }
+
 .header__top {
   display: -webkit-box;
   display: -webkit-flex;
@@ -665,7 +672,10 @@ textarea {
   color: #FC5D5D; }
 
 .cart__checkout-products {
-  margin-top: 40px; }
+  margin-top: 40px;
+  overflow-y: auto;
+  max-height: 650px;
+  margin-bottom: 20px; }
 
 .cart__checkout-product:after {
   content: "";
@@ -802,6 +812,8 @@ textarea {
   max-width: 590px;
   width: 100%;
   background: white; }
+  .cart__data sup {
+    color: #FC5D5D; }
   .cart__data h3 {
     font-size: 22px; }
   .cart__data h4 {
