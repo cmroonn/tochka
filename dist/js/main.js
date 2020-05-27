@@ -31,11 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   {
     var close = document.querySelectorAll(".closePopup");
-    var window = document.querySelector(".notification-popup");
+
+    var _window = document.querySelector(".notification-popup");
+
     close.forEach(function (el) {
       el.addEventListener("click", function (e) {
         e.preventDefault();
-        window.style.display = "none";
+        _window.style.display = "none";
       });
     });
   } // Set nearest delivery time 
@@ -191,20 +193,93 @@ document.addEventListener("DOMContentLoaded", function () {
         return el.parentElement.children[1].value = value;
       }
     };
-  }
+  } // Address suggestion 
+  // {
+  //     const addressessWrapper = document.querySelector(".address_suggest");
+  //     const addresses = document.querySelectorAll(".address_suggest-item");
+  //     const input = document.querySelector(".cart__data input[name='address']");
+  //     input.addEventListener("click", () => {
+  //         addressessWrapper.classList.add("show");
+  //     });
+  //     addresses.forEach(address => {
+  //         address.addEventListener("click", e => {
+  //             let target = e.target.innerText;
+  //             input.value = target;
+  //             address.parentElement.classList.remove("show");
+  //         });
+  //     });
+  // }
+  // apartment informer 
+
   {
-    var addressessWrapper = document.querySelector(".address_suggest");
-    var addresses = document.querySelectorAll(".address_suggest-item");
-    var input = document.querySelector(".cart__data input[name='address']");
-    input.addEventListener("click", function () {
-      addressessWrapper.classList.add("show");
+    var informer = document.getElementById("appartmentInfo");
+    var content = document.querySelector(".appartment-info-hidden");
+    informer.addEventListener("mouseover", function (e) {
+      content.classList.add("show");
     });
-    addresses.forEach(function (address) {
-      address.addEventListener("click", function (e) {
-        var target = e.target.innerText;
-        input.value = target;
-        address.parentElement.classList.remove("show");
+    informer.addEventListener("mouseout", function (e) {
+      content.classList.remove("show");
+    });
+  } // anchors 
+
+  {
+    // собираем все якоря; устанавливаем время анимации и количество кадров
+    var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
+        animationTime = 400,
+        framesCount = 50;
+    anchors.forEach(function (item) {
+      // каждому якорю присваиваем обработчик события
+      item.addEventListener('click', function (e) {
+        // убираем стандартное поведение
+        e.preventDefault(); // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
+
+        var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset - document.querySelector(".header").offsetHeight; // запускаем интервал, в котором
+
+        var scroller = setInterval(function () {
+          // считаем на сколько скроллить за 1 такт
+          var scrollBy = coordY / framesCount; // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
+          // и дно страницы не достигнуто
+
+          if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+            // то скроллим на к-во пикселей, которое соответствует одному такту
+            window.scrollBy(0, scrollBy);
+          } else {
+            // иначе добираемся до элемента и выходим из интервала
+            window.scrollTo(0, coordY);
+            clearInterval(scroller);
+          } // время интервала равняется частному от времени анимации и к-ва кадров
+
+        }, animationTime / framesCount);
       });
+    });
+    var toFillData = document.querySelector(".fill-data-mobile");
+    window.addEventListener("scroll", function () {
+      var scrollY = window.pageYOffset;
+
+      if (scrollY > 1223) {
+        toFillData.classList.remove("show");
+      } else {
+        if (!toFillData.classList.contains("show")) {
+          toFillData.classList.add("show");
+        }
+      }
+    });
+  } // SMS sender settings 
+
+  {
+    $.ajax({
+      headers: {
+        "Content-Type": "application/json",
+        'Authorization': 'key=kPuqrIGUXhvl7ksomy9cOVnZNh2J'
+      },
+      url: "https://fallgetell@gmail.com:kPuqrIGUXhvl7ksomy9cOVnZNh2J@gate.smsaero.ru/v2/sms/testsend?number=79091169019&text=Test+text&sign=BIZNES&channel=DIRECT",
+      type: "POST",
+      timeout: '5000',
+      async: true,
+      dataType: "JSON",
+      data: {
+        id: "1"
+      }
     });
   }
 });

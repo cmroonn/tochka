@@ -134,7 +134,12 @@
       .notification-popup .notification-text p a {
         margin-left: 0; }
     .notification-popup #privacySubmit {
-      margin-top: 20px; } }
+      margin-top: 20px; }
+  .fill-data-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
 
 @media screen and (max-width: 768px) {
   .cart-wrapper {
