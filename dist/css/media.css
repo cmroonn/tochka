@@ -278,7 +278,9 @@
     font-size: 22px; }
   .date-pick-time .time-item {
     width: -webkit-calc((100% / 2) - 10px);
-    width: calc((100% / 2) - 10px); } }
+    width: calc((100% / 2) - 10px); }
+  .date-pick-body {
+    padding: 25px; } }
 
 @media screen and (max-width: 425px) {
   .notification-popup .notification-text p a {
