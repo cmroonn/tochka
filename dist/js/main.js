@@ -55,4 +55,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(setTime, 1000);
   }
+  {
+    var _button2 = document.getElementById("date-picker");
+
+    var _closeButton = document.querySelector(".date-pick .close-window");
+
+    var datePicker = document.querySelector(".date-pick");
+    var timeTabs = document.querySelectorAll(".date-pick-time .time-item");
+    var inputsBlock = document.querySelector(".cart__data-date-inputs");
+    var timeInput = document.getElementById("select_time");
+    var editDate = document.getElementById("editDate");
+
+    _button2.addEventListener("click", function (e) {
+      e.preventDefault();
+      datePicker.classList.add("show");
+      inputsBlock.classList.add("show");
+      _button2.style.display = "none";
+    });
+
+    _closeButton.addEventListener("click", function () {
+      datePicker.classList.remove("show");
+    });
+
+    timeTabs.forEach(function (elem) {
+      elem.addEventListener("click", function () {
+        timeTabs.forEach(function (el) {
+          return el.classList.remove("active");
+        }); // remove class active from all elems
+
+        elem.classList.add("active");
+        timeInput.setAttribute("value", "".concat(elem.innerText)); // set time in input 
+      });
+    });
+    editDate.addEventListener("click", function (e) {
+      e.preventDefault();
+      datePicker.classList.add("show"); // show date picker
+    });
+  } // Inputs validation 
+
+  {
+    var form = document.querySelector(".cart");
+    var submit = document.getElementById("cartSubmit");
+    var emailInput = document.querySelector("input[name='email']");
+    var fields = document.querySelectorAll(".cart .field");
+    var rules = {
+      email: {
+        email: true,
+        required: true
+      },
+      required: {
+        required: true
+      }
+    };
+
+    var validate = function validate() {
+      if (!approve.value(emailInput.value, rules.email).approved) {
+        emailInput.parentElement.classList.add("error");
+      } else {
+        emailInput.parentElement.classList.remove("error");
+      }
+
+      for (var i = 0; i < fields.length; i++) {
+        if (!approve.value(fields[i].value, rules.required).approved) {
+          fields[i].parentElement.classList.add("error");
+        } else {
+          fields[i].parentElement.classList.remove("error");
+        }
+      }
+
+      ;
+      var errors = document.querySelectorAll(".cart .cart-input.error");
+
+      if (errors.length <= 0) {
+        console.log(errors);
+        return true;
+      } else {
+        console.log(errors);
+        return false;
+      }
+    };
+
+    submit.addEventListener("click", function (e) {
+      e.preventDefault();
+      validate();
+
+      if (validate()) {
+        $.ajax({
+          method: 'POST',
+          url: "sender.php"
+        });
+      }
+    });
+  }
 });

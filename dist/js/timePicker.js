@@ -1,5 +1,7 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 (function (document) {
   function cache(key, value) {
     if (typeof value == 'undefined') {
@@ -19,19 +21,23 @@
         allowedTimeSeconds = allowedTimeArray[0] * 3600 + allowedTimeArray[1] * 60,
         currentTimeSeconds = currentHour * 3600 + currentMinutes * 60;
     tomorrow.setDate(today.getDate() + 1);
-    var minDate = currentTimeSeconds > allowedTimeSeconds ? tomorrow : today; // calendar
+    var minDate = currentTimeSeconds > allowedTimeSeconds ? tomorrow : today;
+    var element = document.querySelector(".date-pick-body .date-pick-calendar"); // body in popup window 
+    // calendar
 
-    $('#select_date').flatpickr({
+    $('#select_date').flatpickr(_defineProperty({
       enableTime: false,
       dateFormat: 'd.m.Y',
       minDate: minDate,
       allowInput: true,
       position: 'above',
       disableMobile: true,
-      'locale': {
+      appendTo: element,
+      shorthandCurrentMonth: true,
+      locale: {
         'firstDayOfWeek': 1
       }
-    }); // cut off from function.min.js
+    }, "locale", "ru")); // cut off from function.min.js
     // o("#select_date").flatpickr({enableTime:!1,dateFormat:"d.m.Y",minDate:"today",allowInput:!0,position:"above",disableMobile:!0,locale:{firstDayOfWeek:1}})
   }
 
