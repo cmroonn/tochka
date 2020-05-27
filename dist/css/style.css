@@ -12,9 +12,6 @@ body {
   body.disabled {
     overflow-y: hidden; }
 
-button {
-  font-family: "Cera Pro", sans-serif; }
-
 a {
   color: #141414;
   text-decoration: none; }
@@ -28,7 +25,11 @@ li {
 input,
 button,
 textarea {
-  outline: none; }
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Cera Pro", sans-serif; }
 
 .color-gray {
   color: rgba(20, 20, 20, 0.5); }
