@@ -160,7 +160,11 @@
     max-width: unset; }
   .footer__menu {
     max-height: 280px;
-    max-width: 380px; }
+    max-width: 380px;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    margin: auto; }
     .footer__menu li {
       max-width: 120px; }
       .footer__menu li a {
@@ -183,11 +187,21 @@
       .footer__down .footer__privacy-links li a {
         font-size: 12px; }
   .footer__payment img {
-    width: 100%; } }
+    width: 100%; }
+  .breadcrumbs {
+    padding: 10px 0; }
+  .footer {
+    margin-top: 0; }
+  .footer-wrapper {
+    border: none; }
+  .footer__row:first-child {
+    border-top: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8; } }
 
 @media screen and (max-width: 525px) {
   .container-unset-mob {
-    padding: unset; }
+    padding-left: unset;
+    padding-right: unset; }
   .cart__data-pretotal {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
