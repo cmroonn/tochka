@@ -278,9 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
       timeout: '5000',
       async: true,
       dataType: "JSON",
-      data: {
-        id: "1"
-      }
+      data: {}
     });
   }
 });
