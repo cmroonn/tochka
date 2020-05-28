@@ -131,6 +131,10 @@ textarea {
     margin: 12px 0;
     opacity: .5; }
 
+.blinking {
+  -webkit-animation: blinking 2s infinite;
+  animation: blinking 2s infinite; }
+
 .fw-300 {
   font-weight: 300; }
 
@@ -272,13 +276,15 @@ textarea {
   align-items: center; }
 
 .header__top-nearest-delivery {
-  color: #9d9d9d; }
+  color: #9d9d9d;
+  margin-right: 35px; }
   .header__top-nearest-delivery span {
     color: #141414;
     font-weight: 700;
-    margin-left: 5px;
-    -webkit-animation: blinking 2s infinite;
-    animation: blinking 2s infinite; }
+    cursor: default;
+    margin-left: 5px; }
+  .header__top-nearest-delivery:last-child {
+    margin-right: 0; }
 
 .header__top-contacts {
   display: -webkit-box;
@@ -1402,6 +1408,51 @@ textarea {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }
+
+.choose-city {
+  -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+  max-width: 285px;
+  position: absolute;
+  border: 1px solid #ECECEC;
+  padding: 25px 35px;
+  background: white;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 2px; }
+  .choose-city .btn {
+    max-width: 92px;
+    margin-bottom: 10px; }
+  .choose-city p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px; }
+  .choose-city.show {
+    display: block; }
+  .choose-city .triangle {
+    overflow: hidden;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    left: 22px; }
+    .choose-city .triangle:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      background: white;
+      bottom: -9px;
+      left: 5px;
+      -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+      border: 1px solid #ECECEC; }
 
 /* Flatpickr restyling */
 .flatpickr-calendar {

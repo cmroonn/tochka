@@ -24,13 +24,24 @@
         <header class="header" id="header">
             <div class="header__top">
                 <div class="container header__top-wrapper">
-                    <div class="d-flex header__top-nearest-delivery">
-                        Ближайшая доставка:
+                    <div class="d-flex">
+                        <div class="d-flex header__top-nearest-delivery">
+                            Ближайшая доставка:
+    
+                            <span id="nearDelivery" class="dotted blinking">
+                                <!-- Время -->
+                                12:00
+                            </span>
+                        </div>
 
-                        <span id="nearDelivery" class="dotted">
-                            <!-- Время -->
-                            12:00
-                        </span>
+                        <div class="d-flex header__top-nearest-delivery">
+                            Город:
+    
+                            <span id="usersCity" class="dotted">
+                                <!-- Город -->
+                                Москва
+                            </span>
+                        </div>
                     </div>
 
                     <div class="header__top-contacts">
@@ -1159,7 +1170,7 @@
     </div>
 
 
-    <!-- To fill data (tablet/mobile) -->
+    <!-- scroll to fill data (tablet/mobile) -->
 
     <a href="#personal-data" class="fw-300 text-uppercase btn fill-data-mobile">
         К оформлению
@@ -1168,6 +1179,23 @@
         </svg>
     </a>
 
+    <!-- Choose City -->
+
+    <div class="choose-city">
+        <p>
+            Ваш город: <span class="fw-700">Москва?</span>
+        </p>
+
+        <a href="#" class="btn" id="citySubmit">
+            Да
+        </a>
+
+        <a href="#" class="dotted text-uppercase color-gray fw-700">
+            Выбрать другой город
+        </a>
+
+        <span class="triangle"></span>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js"></script>

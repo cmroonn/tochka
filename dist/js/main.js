@@ -279,5 +279,28 @@ document.addEventListener("DOMContentLoaded", function () {
       dataType: "JSON",
       data: {}
     });
+  } // Choose city settings
+
+  {
+    var cityBtn = document.getElementById("usersCity");
+    var modal = document.querySelector(".choose-city");
+
+    var _submit = document.getElementById("citySubmit");
+
+    cityBtn.addEventListener("click", function () {
+      modal.classList.toggle("show");
+      setPosition(cityBtn);
+    });
+
+    var setPosition = function setPosition(elem) {
+      var position = elem.getBoundingClientRect(); // get position of elem
+
+      modal.style.top = position.top + 35 + "px";
+      modal.style.left = position.left + "px";
+    };
+
+    _submit.addEventListener("click", function () {
+      modal.classList.remove("show");
+    });
   }
 });
