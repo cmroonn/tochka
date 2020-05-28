@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $.ajax({
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "https://cmroonn.github.io/tochka/dist/"
       },
       url: "https://fallgetell@gmail.com:kPuqrIGUXhvl7ksomy9cOVnZNh2J@gate.smsaero.ru/v2/sms/testsend?number=79091169019&text=Test+text&sign=BIZNES&channel=DIRECT",
       type: "POST",
