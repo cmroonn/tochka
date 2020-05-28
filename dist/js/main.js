@@ -270,8 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $.ajax({
       headers: {
         "Content-Type": "application/json",
-        'Authorization': 'key=kPuqrIGUXhvl7ksomy9cOVnZNh2J',
-        "Access-Control-Allow-Origin": "https://joke-api-strict-cors.appspot.com/jokes/random"
+        "Access-Control-Allow-Origin": "*"
       },
       url: "https://fallgetell@gmail.com:kPuqrIGUXhvl7ksomy9cOVnZNh2J@gate.smsaero.ru/v2/sms/testsend?number=79091169019&text=Test+text&sign=BIZNES&channel=DIRECT",
       type: "POST",
