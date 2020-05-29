@@ -27,7 +27,7 @@
                     <div class="d-flex flex-column-mob">
                         <div class="d-flex header__top-nearest-delivery">
                             Ближайшая доставка:
-    
+
                             <span id="nearDelivery" class="dotted blinking">
                                 <!-- Время -->
                                 12:00
@@ -36,7 +36,7 @@
 
                         <div class="d-flex header__top-nearest-delivery">
                             Город:
-    
+
                             <span id="usersCity" class="dotted">
                                 <!-- Город -->
                                 Москва
@@ -576,7 +576,8 @@
                                 <div class="icon">
                                     <img src="img/icons/marker_icon.svg" alt="marker">
                                 </div>
-                                <input type="text" name="address" placeholder="Укажите адрес для доставки покупок" required class="field address-suggest-input" autocomplete="off">
+                                <input type="text" name="address" placeholder="Укажите адрес для доставки покупок"
+                                    required class="field address-suggest-input" autocomplete="off">
                             </label>
 
                             <div class="address_suggest">
@@ -1189,12 +1190,546 @@
             Да
         </a>
 
-        <a href="#" class="dotted text-uppercase color-gray fw-700">
+        <a href="#" class="dotted text-uppercase color-gray fw-700" id="chooseCity">
             Выбрать другой город
         </a>
 
         <span class="triangle"></span>
     </div>
+
+
+    <div class="choose-city_popup">
+
+        <!-- Desktop -->
+        <div class="choose-city_popup-desk">
+
+            <div class="close">
+                <img src="img/icons/remove_icon.svg" alt="close">
+            </div>
+
+            <div class="choose-city_popup-head">
+                <img src="img/icons/place.svg" alt="place">
+
+                <h3>
+                    Выбор города
+                </h3>
+
+                <p class="color-gray">
+                    Введите название Вашего города или выберите из списка возможных городов для того чтобы наши
+                    менеджеры подобрали для вас оптимальные варианты доставки
+                </p>
+            </div>
+
+            <div class="cart-input choose-city_popup-search">
+                <img src="img/icons/marker_icon.svg" alt="marker">
+                <input type="text" name="choose-city" placeholder="Ваш город...">
+            </div>
+
+            <div class="choose-city_popup-body">
+                <!-- City block-->
+                <div class="choose-city_popup-block">
+                    <h4>
+                        <span class="dotted">
+                            Москва
+                        </span>
+                    </h4>
+
+                    <h4>
+                        Московская область
+                    </h4>
+
+                    <div class="city_lists">
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                А
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                Б
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Балашиха
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Бронницы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Верея
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Видное
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Волоколамск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Воскресенск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Высоковск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- City block-->
+                <div class="choose-city_popup-block">
+                    <h4>
+                        <span class="dotted">
+                            Москва
+                        </span>
+                    </h4>
+
+                    <h4>
+                        Московская область
+                    </h4>
+
+                    <div class="city_lists">
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                А
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                Б
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Балашиха
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Бронницы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Верея
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Видное
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Волоколамск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Воскресенск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Высоковск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- City block-->
+                <div class="choose-city_popup-block">
+                    <h4>
+                        <span class="dotted">
+                            Москва
+                        </span>
+                    </h4>
+
+                    <h4>
+                        Московская область
+                    </h4>
+
+                    <div class="city_lists">
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                А
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                Б
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Балашиха
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Бронницы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Верея
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Видное
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Волоколамск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Воскресенск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Высоковск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile -->
+
+        <div class="choose-city_popup-mob">
+            <div class="close">
+                <img src="img/icons/remove_icon.svg" alt="close">
+            </div>
+
+            <div class="choose-city_popup-head">
+                <img src="img/icons/car.svg" alt="car">
+
+                <h3>
+                    Выбор города
+                </h3>
+
+                <p class="color-gray">
+                    Введите название Вашего города или выберите из списка возможных городов для того чтобы наши
+                    менеджеры подобрали для вас оптимальные варианты доставки
+                </p>
+            </div>
+
+            <div class="choose-city_popup-body">
+                <div class="choose-city_block">
+                    <h4>
+                        А
+                    </h4>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Абакан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алдан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Альметьевск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Актау
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алматы
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Ангарск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Агинское
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алейск
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="choose-city_block">
+                    <h4>
+                        Б
+                    </h4>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Абакан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алдан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Альметьевск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Актау
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алматы
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Ангарск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Агинское
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алейск
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js"></script>
@@ -1202,6 +1737,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/approvejs/3.1.2/approve.min.js"></script>
     <script src="js/libs/timePicker.js"></script>
     <script src="js/libs/dd.suggest.js"></script>
+    <script src="http://jscrollpane.kelvinluck.com/script/jquery.mousewheel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.2/script/jquery.jscrollpane.min.js"></script>
+    <script src="js/libs/scrollbar-settings.js"></script>
     <script src="js/main.js"></script>
 </body>
 

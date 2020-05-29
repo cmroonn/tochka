@@ -287,6 +287,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var _submit = document.getElementById("citySubmit");
 
+    var popup = document.querySelector(".choose-city_popup");
+    var openPopupBtn = document.getElementById("chooseCity");
+    var popupDesk = document.querySelector(".choose-city_popup-desk");
+    var popupMob = document.querySelector(".choose-city_popup-mob");
+    var closeButtons = document.querySelectorAll(".choose-city_popup-desk .close, .choose-city_popup-mob .close ");
     cityBtn.addEventListener("click", function () {
       modal.classList.toggle("show");
       setPosition(cityBtn);
@@ -301,6 +306,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     _submit.addEventListener("click", function () {
       modal.classList.remove("show");
+    });
+
+    openPopupBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.classList.remove("show");
+      popup.classList.add("show");
+      body.classList.add("disabled");
+    });
+    popup.addEventListener("click", function (e) {
+      if (e.target == popup) {
+        popup.classList.remove("show");
+        body.classList.remove("disabled");
+      }
+    });
+    closeButtons.forEach(function (el) {
+      el.addEventListener("click", function () {
+        console.log(el.parentElement);
+        el.parentElement.parentElement.classList.remove("show");
+        body.classList.remove("disabled");
+      });
     });
   }
 });
