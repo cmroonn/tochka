@@ -322,5 +322,12 @@ document.addEventListener("DOMContentLoaded", function () {
         body.classList.remove("disabled");
       });
     });
+    body.addEventListener("click", function (e) {
+      var target = e.target;
+
+      if (!modal.contains(target) && target !== cityBtn) {
+        modal.classList.remove("show");
+      }
+    });
   }
 });
