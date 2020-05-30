@@ -820,6 +820,13 @@ textarea {
     font-size: 16px;
     color: rgba(20, 20, 20, 0.5);
     line-height: 16px; }
+  .cart-warning.cart-warning-red {
+    background: rgba(252, 93, 93, 0.1);
+    border: 1px solid #FC5D5D; }
+    .cart-warning.cart-warning-red p {
+      color: #FC5D5D; }
+    .cart-warning.cart-warning-red .cart__data-pretotal-warning-text p {
+      color: #FC5D5D; }
 
 .total-payment {
   display: -webkit-box;
@@ -1168,7 +1175,10 @@ textarea {
     align-self: center; }
   .cart__data-pretotal .total-payment {
     margin-bottom: 7px;
-    font-weight: 400; }
+    font-weight: 400;
+    text-align: right; }
+    .cart__data-pretotal .total-payment span {
+      max-width: 120px; }
     .cart__data-pretotal .total-payment:last-child {
       margin-bottom: 0; }
     .cart__data-pretotal .total-payment p {
