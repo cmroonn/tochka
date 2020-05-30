@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var inputsBlock = document.querySelector(".cart__data-date-inputs");
     var timeInput = document.getElementById("select_time");
     var editDate = document.getElementById("editDate");
+    var confirm = document.querySelector(".date-pick__confirm");
 
     _button2.addEventListener("click", function (e) {
       e.preventDefault();
@@ -92,6 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
       datePicker.classList.remove("show");
     });
 
+    confirm.addEventListener("click", function () {
+      datePicker.classList.remove("show");
+    });
     timeTabs.forEach(function (elem) {
       elem.addEventListener("click", function () {
         timeTabs.forEach(function (el) {
@@ -327,6 +331,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!modal.contains(target) && target !== cityBtn) {
         modal.classList.remove("show");
+      }
+    });
+  } // fixed checkout top line
+
+  {
+    var checkoutTop = document.querySelector(".cart__checkout-top");
+    window.addEventListener("scroll", function (e) {
+      if (pageYOffset > 175) {
+        checkoutTop.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 23px 20px -20px";
+      } else {
+        checkoutTop.removeAttribute("style");
       }
     });
   }

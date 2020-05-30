@@ -10,4 +10,13 @@ $(document).ready(function() {
 		verticalDragMaxHeight: 18,
     });
 
+    $(".cart__data").jScrollPane();
+
+    $(window).resize(function() {
+        if(window.innerWidth < 1170) {
+            $(".cart__data").jScrollPane().data('jsp').destroy();
+            console.log('preive');
+        }
+    });
+
 });
