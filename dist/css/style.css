@@ -863,6 +863,7 @@ textarea {
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
+  outline: none;
   /* scrollbar settings */ }
   .cart__data sup {
     color: #FC5D5D; }
