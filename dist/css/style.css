@@ -1126,7 +1126,7 @@ textarea {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  padding: 10px 0;
+  padding: 0 0 10px;
   background: white; }
   .cart__data-total .cart-checkbox {
     margin: 15px 0; }
