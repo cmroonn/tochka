@@ -8,9 +8,14 @@
 
 @media screen and (max-width: 1495px) {
   .cart__checkout {
-    padding: 45px 30px 75px;
+    padding: 45px 0 75px;
     max-width: 780px;
-    margin-right: 10px; } }
+    margin-right: 10px; }
+    .cart__checkout .subtitle,
+    .cart__checkout .cart__checkout-progressbar,
+    .cart__checkout .cart__checkout-products,
+    .cart__checkout .cart__checkout-total {
+      padding: 0 30px; } }
 
 @media screen and (max-width: 1400px) {
   .cart__checkout-total {

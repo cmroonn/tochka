@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
       var scrollY = window.pageYOffset;
 
-      if (scrollY > 1223) {
+      if (scrollY > 1050) {
         toFillData.classList.remove("show");
       } else {
         if (!toFillData.classList.contains("show")) {
