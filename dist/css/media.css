@@ -72,10 +72,14 @@
     align-self: unset;
     margin-right: 0;
     margin-bottom: 35px; }
+  .cart__data {
+    max-height: unset; }
   .cart__data-personal .cart-input {
     max-width: unset;
     width: -webkit-calc((100%/2) - 20px);
     width: calc((100%/2) - 20px); }
+  .cart__checkout-top {
+    position: static; }
   .header__top-contacts {
     display: none; }
   .header__top-wrapper {
@@ -335,4 +339,6 @@
       font-size: 12px; }
     .choose-city a.btn {
       height: 24px;
-      font-size: 12px; } }
+      font-size: 12px; }
+  .date-pick-calendar .flatpickr-calendar {
+    width: 100%; } }

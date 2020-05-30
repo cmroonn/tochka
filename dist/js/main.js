@@ -11,8 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
       button.classList.toggle("menu-btn-active");
       body.classList.toggle("disabled");
       menu.classList.toggle("show");
+    }); // set new styles if scrolling down 
+
+    window.addEventListener("scroll", function () {
+      var scrollY = window.pageYOffset;
+
+      if (scrollY > 55) {
+        menu.style.top = 143 + "px";
+        menu.style.height = "calc(100vh - 143px)";
+      } else {
+        menu.removeAttribute("style");
+      }
     });
-  }
+  } // Show search row in header
+
   {
     var _button = document.getElementById("searchButton");
 
@@ -40,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         _window.style.display = "none";
       });
     });
-  } // Set nearest delivery time 
+  } // Set nearest delivery time !!
 
   {
     // get current time
@@ -56,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     setInterval(setTime, 1000);
-  }
+  } // Date picker
+
   {
     var _button2 = document.getElementById("date-picker");
 
@@ -142,10 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var errors = document.querySelectorAll(".cart .cart-input.error");
 
       if (errors.length <= 0) {
-        console.log(errors);
         return true;
       } else {
-        console.log(errors);
         return false;
       }
     };
@@ -164,7 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("err").style.display = "block";
       }
     });
-  }
+  } // add more items 
+
   {
     var plus = document.querySelectorAll(".plusCount");
     var minus = document.querySelectorAll(".minusCount");
@@ -193,23 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return el.parentElement.children[1].value = value;
       }
     };
-  } // Address suggestion 
-  // {
-  //     const addressessWrapper = document.querySelector(".address_suggest");
-  //     const addresses = document.querySelectorAll(".address_suggest-item");
-  //     const input = document.querySelector(".cart__data input[name='address']");
-  //     input.addEventListener("click", () => {
-  //         addressessWrapper.classList.add("show");
-  //     });
-  //     addresses.forEach(address => {
-  //         address.addEventListener("click", e => {
-  //             let target = e.target.innerText;
-  //             input.value = target;
-  //             address.parentElement.classList.remove("show");
-  //         });
-  //     });
-  // }
-  // apartment informer 
+  } // apartment informer 
 
   {
     var informer = document.getElementById("appartmentInfo");
@@ -322,7 +318,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     closeButtons.forEach(function (el) {
       el.addEventListener("click", function () {
-        console.log(el.parentElement);
         el.parentElement.parentElement.classList.remove("show");
         body.classList.remove("disabled");
       });
