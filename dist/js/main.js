@@ -225,8 +225,8 @@ document.addEventListener("DOMContentLoaded", function () {
   {
     // собираем все якоря; устанавливаем время анимации и количество кадров
     var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-        animationTime = 400,
-        framesCount = 50;
+        animationTime = 200,
+        framesCount = 80;
     anchors.forEach(function (item) {
       // каждому якорю присваиваем обработчик события
       item.addEventListener('click', function (e) {
