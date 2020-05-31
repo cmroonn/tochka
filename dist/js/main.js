@@ -320,12 +320,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   {
     var checkoutTop = document.querySelector(".cart__checkout-top");
-    window.addEventListener("scroll", function (e) {
-      if (pageYOffset > 175) {
-        checkoutTop.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 23px 20px -20px";
-      } else {
-        checkoutTop.removeAttribute("style");
-      }
+    checkWindowWidth();
+    window.addEventListener("resize", function () {
+      checkWindowWidth();
     });
+
+    var checkWindowWidth = function checkWindowWidth() {
+      if (window.innerWidth < 1170) {
+        window.addEventListener("scroll", function (e) {
+          if (pageYOffset > 175) {
+            checkoutTop.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 23px 20px -20px";
+          } else {
+            checkoutTop.removeAttribute("style");
+          }
+        });
+      }
+    };
   }
 });
