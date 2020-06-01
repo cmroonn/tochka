@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (errors.length <= 0) {
         return true;
       } else {
+        errors[0].focus();
         return false;
       }
     };
@@ -320,10 +321,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   {
     var checkoutTop = document.querySelector(".cart__checkout-top");
-    checkWindowWidth();
-    window.addEventListener("resize", function () {
-      checkWindowWidth();
-    });
 
     var checkWindowWidth = function checkWindowWidth() {
       if (window.innerWidth < 1170) {
@@ -336,5 +333,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     };
-  }
+
+    checkWindowWidth();
+    window.addEventListener("resize", function () {
+      checkWindowWidth();
+    });
+  } // personal data block settings 
+  // {
+  //     window.addEventListener("scroll", (e) => {
+  //         console.log(pageYOffset);
+  //         if(pageYOffset > 71) {
+  //             document.querySelector(".cart__data").style.maxHeight = "calc(100vh - 70px)";
+  //         } else {
+  //             document.querySelector(".cart__data").style.maxHeight = "";
+  //         }
+  //     });
+  // }
 });

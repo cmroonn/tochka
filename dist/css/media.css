@@ -2,8 +2,6 @@
   .header__menu-mob {
     display: none; }
   .header__personal-mob {
-    display: none; }
-  .choose-city_popup-mob {
     display: none; } }
 
 @media screen and (max-width: 1495px) {
@@ -116,11 +114,24 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-  .choose-city_popup-desk {
-    display: none; }
   .cart__data-total {
     -webkit-box-shadow: unset;
-    box-shadow: unset; } }
+    box-shadow: unset; }
+  .choose-city_popup-desk {
+    height: 80vh; }
+    .choose-city_popup-desk .choose-city_popup-head img {
+      width: 55px;
+      height: 55px; }
+    .choose-city_popup-desk .choose-city_popup-head h3 {
+      font-size: 18px; }
+    .choose-city_popup-desk .choose-city_popup-head p {
+      font-size: 12px; }
+    .choose-city_popup-desk .choose-city_popup-search {
+      display: none; }
+    .choose-city_popup-desk .choose-city_popup-body {
+      display: none; }
+    .choose-city_popup-desk .choose-city_popup-body-mob {
+      display: block; } }
 
 @media screen and (max-width: 768px) {
   .cart-wrapper {
