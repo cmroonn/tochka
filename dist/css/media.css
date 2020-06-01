@@ -118,7 +118,8 @@
     -webkit-box-shadow: unset;
     box-shadow: unset; }
   .choose-city_popup-desk {
-    height: 80vh; }
+    max-height: 95vh;
+    height: auto; }
     .choose-city_popup-desk .choose-city_popup-head img {
       width: 55px;
       height: 55px; }
@@ -131,7 +132,9 @@
     .choose-city_popup-desk .choose-city_popup-body {
       display: none; }
     .choose-city_popup-desk .choose-city_popup-body-mob {
-      display: block; } }
+      display: block;
+      margin-top: 30px;
+      height: auto; } }
 
 @media screen and (max-width: 768px) {
   .cart-wrapper {
@@ -149,7 +152,10 @@
     height: 18px; }
   .cart__checkout-total .cart-warning {
     margin-left: unset;
-    max-width: unset; } }
+    max-width: unset; }
+  .choose-city_popup-desk {
+    width: 280px;
+    padding: 20px; } }
 
 @media screen and (max-width: 525px) {
   .container-unset-mob {
@@ -288,3 +294,7 @@
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0); } }
+
+@media screen and (max-width: 500px) and (max-height: 610px) {
+  .choose-city_popup-desk .choose-city_popup-body-mob {
+    height: 200px; } }
