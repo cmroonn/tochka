@@ -392,12 +392,14 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function (e) {
       console.log(pageYOffset);
 
-      if (pageYOffset > 30) {
-        document.querySelector(".cart__data").style.maxHeight = "calc(100vh - 80px)";
-        $(".cart__data").jScrollPane().data('jsp').reinitialise();
-      } else {
-        document.querySelector(".cart__data").style.maxHeight = "";
-        $(".cart__data").jScrollPane().data('jsp').reinitialise();
+      if (window.innerWidth > 1170) {
+        if (pageYOffset > 30) {
+          document.querySelector(".cart__data").style.maxHeight = "calc(100vh - 80px)";
+          $(".cart__data").jScrollPane().data('jsp').reinitialise();
+        } else {
+          document.querySelector(".cart__data").style.maxHeight = "";
+          $(".cart__data").jScrollPane().data('jsp').reinitialise();
+        }
       }
     });
   }
