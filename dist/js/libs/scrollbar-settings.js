@@ -5,12 +5,13 @@ $(document).ready(function() {
 		verticalDragMaxHeight: 63,
     });
 
-    $(".choose-city_popup-mob .choose-city_popup-body").jScrollPane({
-        verticalDragMinHeight: 18,
-		verticalDragMaxHeight: 18,
+    $(".delivery-info__content").jScrollPane({
+        verticalDragMinHeight: 63,
+		verticalDragMaxHeight: 63,
     });
 
     $(".cart__data").jScrollPane();
+
 
     $(window).resize(function() {
         if(window.innerWidth < 1170) {

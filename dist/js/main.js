@@ -1,7 +1,25 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var body = document.querySelector("body"); // Hamburger menu settings
+  var body = document.querySelector("body");
+  var allModals = document.querySelectorAll(".date-pick, .choose-city, .choose-city_popup, .delivery-info");
+
+  var bodyAddDisabled = function bodyAddDisabled() {
+    body.classList.add("disabled");
+  };
+
+  var bodyRemoveDisabled = function bodyRemoveDisabled() {
+    body.classList.remove("disabled");
+  };
+
+  document.addEventListener("keydown", function (e) {
+    if (e.keyCode === 27) {
+      allModals.forEach(function (modal) {
+        modal.classList.remove("show");
+      });
+      bodyRemoveDisabled();
+    }
+  }); // Hamburger menu settings
 
   {
     var button = document.querySelector(".menu-btn");
@@ -53,25 +71,45 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   } // Set nearest delivery time !!
+  // {
+  //     // get current time
+  //     const getCurrentTime = () => {
+  //         const time = new Date(Date.now());
+  //         let hours = time.getUTCHours();
+  //         const minutes = time.getUTCMinutes();
+  //         return hours + ":" + minutes;
+  //     };
+  //     const setTime = () => {
+  //         document.getElementById("nearDelivery").innerHTML = getCurrentTime();
+  //     };
+  //     setInterval(setTime, 1000);
+  // }
 
   {
-    // get current time
-    var getCurrentTime = function getCurrentTime() {
-      var time = new Date(Date.now());
-      var hours = time.getUTCHours();
-      var minutes = time.getUTCMinutes();
-      return hours + ":" + minutes;
-    };
+    var _button2 = document.getElementById("nearDelivery");
 
-    var setTime = function setTime() {
-      document.getElementById("nearDelivery").innerHTML = getCurrentTime();
-    };
+    var modal = document.querySelector(".delivery-info");
+    var closeBtn = document.querySelector(".delivery-info-close");
 
-    setInterval(setTime, 1000);
+    _button2.addEventListener("click", function () {
+      modal.classList.add("show");
+      bodyAddDisabled();
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+        bodyRemoveDisabled();
+      }
+    });
+    closeBtn.addEventListener("click", function (e) {
+      modal.classList.remove("show");
+      bodyRemoveDisabled();
+    });
   } // Date picker
 
   {
-    var _button2 = document.getElementById("date-picker");
+    var _button3 = document.getElementById("date-picker");
 
     var _closeButton = document.querySelector(".date-pick .close-window");
 
@@ -82,19 +120,22 @@ document.addEventListener("DOMContentLoaded", function () {
     var editDate = document.getElementById("editDate");
     var confirm = document.querySelector(".date-pick__confirm");
 
-    _button2.addEventListener("click", function (e) {
+    _button3.addEventListener("click", function (e) {
       e.preventDefault();
       datePicker.classList.add("show");
       inputsBlock.classList.add("show");
-      _button2.style.display = "none";
+      _button3.style.display = "none";
+      bodyAddDisabled();
     });
 
     _closeButton.addEventListener("click", function () {
       datePicker.classList.remove("show");
+      bodyRemoveDisabled();
     });
 
     confirm.addEventListener("click", function () {
       datePicker.classList.remove("show");
+      bodyRemoveDisabled();
     });
     timeTabs.forEach(function (elem) {
       elem.addEventListener("click", function () {
@@ -109,6 +150,8 @@ document.addEventListener("DOMContentLoaded", function () {
     editDate.addEventListener("click", function (e) {
       e.preventDefault();
       datePicker.classList.add("show"); // show date picker
+
+      bodyAddDisabled();
     });
     datePicker.addEventListener("click", function (e) {
       var target = e.target;
@@ -116,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (target == datePicker) {
         datePicker.classList.remove("show");
+        bodyRemoveDisabled();
       } // for(let i = 0; i < children.length; i++) {
       //     if(target !== children[i]) {
       //         datePicker.classList.remove("show");
@@ -267,7 +311,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   {
     var cityBtn = document.getElementById("usersCity");
-    var modal = document.querySelector(".choose-city");
+
+    var _modal = document.querySelector(".choose-city");
 
     var _submit = document.getElementById("citySubmit");
 
@@ -277,44 +322,47 @@ document.addEventListener("DOMContentLoaded", function () {
     var popupMob = document.querySelector(".choose-city_popup-mob");
     var closeButtons = document.querySelectorAll(".choose-city_popup-desk .close, .choose-city_popup-mob .close ");
     cityBtn.addEventListener("click", function () {
-      modal.classList.toggle("show");
+      _modal.classList.toggle("show");
+
       setPosition(cityBtn);
     });
 
     var setPosition = function setPosition(elem) {
       var position = elem.getBoundingClientRect(); // get position of elem
 
-      modal.style.top = position.top + 35 + "px";
-      modal.style.left = position.left + "px";
+      _modal.style.top = position.top + 35 + "px";
+      _modal.style.left = position.left + "px";
     };
 
     _submit.addEventListener("click", function () {
-      modal.classList.remove("show");
+      _modal.classList.remove("show");
     });
 
     openPopupBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      modal.classList.remove("show");
+
+      _modal.classList.remove("show");
+
       popup.classList.add("show");
-      body.classList.add("disabled");
+      bodyAddDisabled();
     });
     popup.addEventListener("click", function (e) {
       if (e.target == popup) {
         popup.classList.remove("show");
-        body.classList.remove("disabled");
+        bodyRemoveDisabled();
       }
     });
     closeButtons.forEach(function (el) {
       el.addEventListener("click", function () {
         el.parentElement.parentElement.classList.remove("show");
-        body.classList.remove("disabled");
+        bodyRemoveDisabled();
       });
     });
     body.addEventListener("click", function (e) {
       var target = e.target;
 
-      if (!modal.contains(target) && target !== cityBtn) {
-        modal.classList.remove("show");
+      if (!_modal.contains(target) && target !== cityBtn) {
+        _modal.classList.remove("show");
       }
     });
   } // fixed checkout top line
@@ -325,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var checkWindowWidth = function checkWindowWidth() {
       if (window.innerWidth < 1170) {
         window.addEventListener("scroll", function (e) {
-          if (pageYOffset > 175) {
+          if (pageYOffset > 50) {
             checkoutTop.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 23px 20px -20px";
           } else {
             checkoutTop.removeAttribute("style");
@@ -339,14 +387,18 @@ document.addEventListener("DOMContentLoaded", function () {
       checkWindowWidth();
     });
   } // personal data block settings 
-  // {
-  //     window.addEventListener("scroll", (e) => {
-  //         console.log(pageYOffset);
-  //         if(pageYOffset > 71) {
-  //             document.querySelector(".cart__data").style.maxHeight = "calc(100vh - 70px)";
-  //         } else {
-  //             document.querySelector(".cart__data").style.maxHeight = "";
-  //         }
-  //     });
-  // }
+
+  {
+    window.addEventListener("scroll", function (e) {
+      console.log(pageYOffset);
+
+      if (pageYOffset > 30) {
+        document.querySelector(".cart__data").style.maxHeight = "calc(100vh - 80px)";
+        $(".cart__data").jScrollPane().data('jsp').reinitialise();
+      } else {
+        document.querySelector(".cart__data").style.maxHeight = "";
+        $(".cart__data").jScrollPane().data('jsp').reinitialise();
+      }
+    });
+  }
 });
