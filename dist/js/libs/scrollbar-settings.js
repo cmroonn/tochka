@@ -12,10 +12,17 @@ $(document).ready(function() {
 
     $(".cart__data").jScrollPane();
 
+    if(window.innerWidth < 1170) {
+        $(".cart__data").jScrollPane().data('jsp').destroy();
+        $(".delivery-info__content").jScrollPane().data('jsp').destroy();
+
+    }
+
 
     $(window).resize(function() {
         if(window.innerWidth < 1170) {
             $(".cart__data").jScrollPane().data('jsp').destroy();
+            $(".delivery-info__content").jScrollPane().data('jsp').destroy();
 
         }
     });
