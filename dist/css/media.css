@@ -211,7 +211,9 @@
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
-    align-items: flex-start; } }
+    align-items: flex-start; }
+  .header__top-nearest-delivery {
+    font-size: 12px; } }
 
 @media screen and (max-width: 525px) {
   .container-unset-mob {
@@ -237,8 +239,6 @@
     margin-bottom: 20px; }
     .cart__data-personal .flex-column-mob.cart__data-input-row .cart-input:last-child {
       margin-bottom: 0; }
-  .header {
-    top: -55px; }
   .mobile-menu {
     height: -webkit-calc(100vh - 199px);
     height: calc(100vh - 199px);
