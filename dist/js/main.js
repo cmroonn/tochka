@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var checkoutTop = document.querySelector(".cart__checkout-top");
 
     var checkWindowWidth = function checkWindowWidth() {
-      if (window.innerWidth < 1170) {
+      if (window.innerWidth > 1170) {
         window.addEventListener("scroll", function (e) {
           if (pageYOffset > 50) {
             checkoutTop.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 23px 20px -20px";

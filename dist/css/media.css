@@ -147,6 +147,8 @@
       height: auto; }
   .delivery-info {
     overflow-y: auto; }
+  .delivery-info-body:after {
+    display: none; }
   .delivery-info-body .delivery-info__title {
     font-size: 18px; }
   .delivery-info-body .delivery-info__subtitle {
@@ -181,7 +183,16 @@
     display: flex; }
     .delivery-info__map iframe {
       width: 628px;
-      height: 244px; } }
+      height: 244px; }
+  .delivery-info__content-block {
+    margin-bottom: 70px; }
+    .delivery-info__content-block h3 {
+      font-size: 18px; }
+    .delivery-info__content-block p {
+      font-size: 12px;
+      line-height: 30px; }
+  .delivery-info__content-block-list li {
+    font-size: 12px; } }
 
 @media screen and (max-width: 825px) {
   .delivery-info__cost-block {
@@ -248,8 +259,6 @@
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0); }
-    .delivery-info-body:after {
-      display: none; }
     .delivery-info-body .cart-warning {
       margin: 40px auto !important; } }
 

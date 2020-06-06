@@ -147,6 +147,9 @@ textarea {
 .fw-500 {
   font-weight: 500; }
 
+.fw-600 {
+  font-weight: 600; }
+
 .fw-700 {
   font-weight: 700; }
 
@@ -220,11 +223,6 @@ textarea {
 .numbered-list__block-tip {
   font-size: 14px;
   padding-left: 75px; }
-  .numbered-list__block-tip .dot {
-    width: 22px;
-    height: 22px;
-    background: #434343;
-    margin-right: 20px; }
   .numbered-list__block-tip ul {
     margin-top: 15px; }
     .numbered-list__block-tip ul li {
@@ -246,6 +244,25 @@ textarea {
         background: #434343;
         margin-right: 15px;
         border-radius: 50%; }
+
+.dotted-list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 0; }
+  .dotted-list li:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #434343;
+    margin-right: 15px;
+    border-radius: 50%; }
 
 @-webkit-keyframes blinking {
   from {
@@ -1910,6 +1927,14 @@ textarea {
 
 .delivery-info__map {
   padding: 50px 0 80px; }
+
+.delivery-info__content-block {
+  margin-bottom: 70px; }
+  .delivery-info__content-block h3 {
+    font-size: 36px; }
+  .delivery-info__content-block p {
+    font-size: 18px;
+    font-weight: 300; }
 
 /* Flatpickr restyling */
 .flatpickr-calendar {
