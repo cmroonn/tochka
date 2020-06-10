@@ -66,7 +66,7 @@
                             </a>
 
                             <a href="#">
-                                <img src="img/icons/iconmonstr-telegram-1.svg" alt="telegram">
+                                <img src="img/icons/iconmonstr-telegram-1.svg" alt="telegram" style="width: 20px;height:20px;">
                             </a>
                         </div>
                     </div>
@@ -652,42 +652,18 @@
                                     <img src="img/icons/marker_icon.svg" alt="marker">
                                 </div>
                                 <input type="text" name="address" placeholder="Укажите адрес для доставки покупок"
-                                    required class="field address-suggest-input" autocomplete="off">
+                                    required class="field address-suggest-input" autocomplete="nope">
                             </label>
+
 
                             <div class="address_suggest">
                                 <div class="address_suggest-item">
                                     Пушкина
                                 </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
-
-                                <div class="address_suggest-item">
-                                    Пушкина
-                                </div>
                             </div>
+                        </div>
+                        <div id="checkHome" style="color: #FC5D5D; display: none;margin: -15px 0 15px;">
+                            Укажите номер дома!
                         </div>
 
                         <div class="cart__data-input-row">
@@ -695,7 +671,8 @@
                                 <div class="icon">
                                     <img src="img/icons/door_icon.svg" alt="apartament">
                                 </div>
-                                <input type="text" name="apartament" placeholder="Квартира" required class="field">
+                                <input type="text" name="apartament" placeholder="Квартира" required class="field"
+                                    autocomplete="off">
 
                                 <img src="img/icons/info_icon.svg" alt="informer" id="appartmentInfo"
                                     class="appartment-info">
@@ -826,8 +803,15 @@
                         <label class="cart-radio">
                             <input type="radio" value="Упаковать в личную ЭКО-сумку" name="payment" required>
 
-                            <span class="d-flex flex-column">
-                                Безналичный платёж при получении
+                            <span class="d-flex">
+                                Оплата с помощью  
+                                <img src="img/icons/applePay.svg" alt="" class="paymentMethodIcon">
+
+                                <!-- divider -->
+                                <div class="vertical-divide"></div>
+
+                                <img src="img/icons/googlePay.svg" alt="" class="paymentMethodIcon">
+
                             </span>
                         </label>
 
@@ -836,9 +820,22 @@
                             <input type="radio" value="Упаковать в личную ЭКО-сумку" name="payment" required>
 
                             <span class="d-flex flex-column">
-                                Наличными при получении
+                                Оплата онлайн
                             </span>
                         </label>
+
+
+                        <div class="cart-warning" style="max-width: unset;padding: 15px;">
+                            <!-- checkbox -->
+                            <label class="cart-checkbox" style="margin-bottom: 0;">
+                                <input type="checkbox" value="Оставить у двери" name="leaveAtTheDoor">
+
+                                <span>
+                                    Оставить заказ у двери
+                                    <i class="fw-500"> (Опция доступна только при оплате онлайн)</i>
+                                </span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="cart__data-block">
@@ -898,6 +895,20 @@
                                     Получайте персональные предложения скидки самые свежие новости и информацию об
                                     акциях
                                 </p>
+                            </span>
+                        </label>
+
+
+                        <!-- checkbox -->
+                        <label class="cart-checkbox cart__data-total-checkbox">
+                            <input type="checkbox" value="Согласие на обработку персональных данных"
+                                name="personal-data-checkbox">
+
+                            <span>
+                                Я подтверждаю свое согласие с
+                                <a href="#" class="dotted color-gray fw-700 text-uppercase">
+                                    Пользовательским соглашением
+                                </a>
                             </span>
                         </label>
                     </div>
@@ -987,33 +998,25 @@
                     <!-- divider -->
                     <div class="dotted dotted-divider"></div>
 
+                    <div class="cart-warning d-flex jc-between">
+                        <img src="img/icons/info_icon.svg" alt="info">
+
+
+                        <div class="cart__data-pretotal-warning-text">
+                            <p>
+                                Конечный вес продуктов может меняться после перезвешивания! Это может отразиться на конечной сумме заказа.
+                            </p>
+                        </div>
+                    </div>
+
                     <div class="cart__data-block cart__data-total">
                         <div class="d-flex jc-end">
                             <div class="d-flex flex-column ai-end">
-                                <div class="total-payment">
-                                    <span>
-                                        Всего к оплате:
-                                    </span>
-                                    <p class="total-payment-price">
-                                        12,980 <span>₽</span>
-                                    </p>
-                                </div>
 
-
-                                <label class="cart-checkbox cart__data-total-checkbox">
-                                    <input type="checkbox" value="Согласие на обработку персональных данных"
-                                        name="personal-data-checkbox">
-
-                                    <span>
-                                        Я подтверждаю свое согласие с
-                                        <a href="#" class="dotted color-gray fw-700 text-uppercase">
-                                            Пользовательским соглашением
-                                        </a>
-                                    </span>
-                                </label>
-
-                                <input class="fw-300 text-uppercase btn cart__data-submit" id="cartSubmit" type="submit"
-                                    value="Оформить заказ">
+                                <!--==== Submit button ====-->
+                                <button class="fw-300 text-uppercase btn cart__data-submit" id="cartSubmit" type="submit">
+                                    Оформить заказ на 12,590 ₽
+                                </button>
 
                                 <div id="err" style="display: none; font-size: 12px;color: #FC5D5D;margin-top: 10px;">
                                     Убедитесь, что все поля заполнены верно
@@ -1171,7 +1174,7 @@
 
     <div class="ai-center jc-center fill-data-mobile">
         <a href="#personal-data" class="fw-300 text-uppercase btn anchor">
-            К оформлению
+            Оформить
             <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.799805 0.199951H9.1998L4.9998 4.59995L0.799805 0.199951Z" fill="white" />
             </svg>
@@ -2038,15 +2041,16 @@
                         </h3>
 
                         <p>
-                            При хранении товаров и комплектовании заказов мы учитываем 
-                            <span class="fw-600">принципы соседства</span>, 
-                            <span class="fw-600">температурные режимы</span> и 
+                            При хранении товаров и комплектовании заказов мы учитываем
+                            <span class="fw-600">принципы соседства</span>,
+                            <span class="fw-600">температурные режимы</span> и
                             <span class="fw-600">особенности условий хранения</span>,
-                            чтобы вы всегда получали самые свежие и вкусные продукты. Мы уделяем особое внимание 
+                            чтобы вы всегда получали самые свежие и вкусные продукты. Мы уделяем особое внимание
                             <span class="fw-600">упаковке продуктов</span>
                             и развозим заказы в специально оборудованных
                             машинах с холодильными камерами, чтобы каждый из них был доставлен в целости и сохранности в
-                            удобное для вас место, будь то <span class="fw-600">дом</span>, <span class="fw-600">офис</span> или <span class="fw-600">дача</span>.
+                            удобное для вас место, будь то <span class="fw-600">дом</span>, <span
+                                class="fw-600">офис</span> или <span class="fw-600">дача</span>.
                         </p>
                     </div>
 
@@ -2071,7 +2075,8 @@
                         </ul>
 
                         <p>
-                            Доставка в продуктоматы, где вы можете забрать свой заказ самостоятельно в любое удобное время.
+                            Доставка в продуктоматы, где вы можете забрать свой заказ самостоятельно в любое удобное
+                            время.
                         </p>
                     </div>
 
@@ -2085,12 +2090,16 @@
                             <img src="img/icons/info_icon.svg" alt="info">
 
                             <p>
-                                К заказу прилагаются <span class="fw-500">товарная накладная</span>, <span class="fw-500">кассовый чек</span> и <span class="fw-500">слип</span> ( при оплате пластиковой картой ). 
+                                К заказу прилагаются <span class="fw-500">товарная накладная</span>, <span
+                                    class="fw-500">кассовый чек</span> и <span class="fw-500">слип</span> ( при оплате
+                                пластиковой картой ).
                             </p>
                         </div>
 
                         <p>
-                            Если вы не сможете принять заказ в обозначенное время, то у вас есть возможность отменить его или выбрать другое время доставки продуктов из интернет-магазина. Для этого, пожалуйста, позвоните в контакт-центр по телефону  
+                            Если вы не сможете принять заказ в обозначенное время, то у вас есть возможность отменить
+                            его или выбрать другое время доставки продуктов из интернет-магазина. Для этого, пожалуйста,
+                            позвоните в контакт-центр по телефону
                         </p>
 
                         <a href="tel:+70663641919" class="fw-600">
@@ -2098,11 +2107,14 @@
                         </a>
 
                         <p>
-                            Вы можете отказаться от всего заказа или части доставленных товаров без объяснения причин. Для этого необходимо подписать два экземпляра <span class="fw-600">товарной накладной</span> с пометкой водителя-экспедитора об отказе.
+                            Вы можете отказаться от всего заказа или части доставленных товаров без объяснения причин.
+                            Для этого необходимо подписать два экземпляра <span class="fw-600">товарной накладной</span>
+                            с пометкой водителя-экспедитора об отказе.
                         </p>
 
                         <p>
-                            Бесплатная доставка продуктов в пределах МКАД осуществляется при заказе на общую сумму от <span class="fw-600">3 000</span> рублей.
+                            Бесплатная доставка продуктов в пределах МКАД осуществляется при заказе на общую сумму от
+                            <span class="fw-600">3 000</span> рублей.
                         </p>
                     </div>
                 </div>

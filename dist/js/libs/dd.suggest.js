@@ -37,10 +37,10 @@
         locations: [
           {region: 'москва'},
           {region: 'московская'},
-        ]
+        ],
+        fias_level: 8,
       };
       suggestData = JSON.stringify(suggestData);
-
     $.ajax({
       url: 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
       type: 'POST',
@@ -53,13 +53,16 @@
   }
 
   function fillSuggestions(data) {
+    console.log(data.suggestions);
+    data.suggestions.forEach(suggest => {
+      console.log(suggest);
+    });
     var $suggestWrapper = $('.address_suggest');
     $suggestWrapper.fadeOut(150);
     $suggestWrapper.empty(); // clearing suggests
-    
     if(data.suggestions.length) {
       data.suggestions.forEach(function(elem) { // filling 'em with new elements
-        $suggestWrapper.append('<div class="address_suggest-item">'+ elem.value +'</div>');
+        $suggestWrapper.append(`<div class="address_suggest-item" data-level="${elem.data.fias_level}"> `+ elem.value +'</div>');
       });
     } else {
       $suggestWrapper.append('<div class="address_suggest-item">Адрес не найден</div>');
@@ -75,7 +78,20 @@
 
     $('.address_suggest').on('click', '.address_suggest-item', function() {
       $('.address-suggest-input').val(this.innerText);
+      // Set FIAS_LEVEL to Input 
+      $('.address-suggest-input').attr('data-level', `${$(this).attr('data-level')}`);
       $('.address_suggest').fadeOut(150);
+
+
+      // show error if fias_level isn't equals 8
+      if($('.address-suggest-input').attr('data-level') !== "8") {
+        $('#checkHome').css("display", "block");
+        $('.address-suggest-input').parent("label").addClass("error");
+      } else if ($('.address-suggest-input').attr('data-level') === "8") {
+        $('#checkHome').css("display", "none");
+        $('.address-suggest-input').parent("label").removeClass("error");
+  
+      }
     });
 
     $(document).click(function(e){

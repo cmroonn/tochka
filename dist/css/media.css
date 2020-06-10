@@ -287,9 +287,11 @@
     .cart__data-personal .flex-column-mob.cart__data-input-row .cart-input:last-child {
       margin-bottom: 0; }
   .mobile-menu {
-    height: -webkit-calc(100vh - 199px);
-    height: calc(100vh - 199px);
-    top: 199px; } }
+    height: -webkit-calc(100vh - 178px);
+    height: calc(100vh - 178px);
+    top: 178px; }
+  .paymentMethodIcon {
+    width: 30px; } }
 
 @media screen and (max-width: 450px) {
   .header__menu-logo img {
@@ -341,6 +343,10 @@
     font-size: 12px; }
   .cart__data-promocode a {
     font-size: 12px; }
+  .cart__data-submit {
+    font-size: 12px;
+    padding: 10px;
+    min-width: 258px; }
   .cart-checkbox span,
   .cart-radio span {
     font-size: 12px; }

@@ -24,23 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
   {
     var button = document.querySelector(".menu-btn");
     var menu = document.getElementById("mob-menu");
+    var header = document.querySelector(".header");
     button.addEventListener("click", function (e) {
       e.preventDefault();
       button.classList.toggle("menu-btn-active");
       body.classList.toggle("disabled");
       menu.classList.toggle("show");
     }); // set new styles if scrolling down 
-
-    window.addEventListener("scroll", function () {
-      var scrollY = window.pageYOffset;
-
-      if (scrollY > 55) {
-        menu.style.top = 143 + "px";
-        menu.style.height = "calc(100vh - 143px)";
-      } else {
-        menu.removeAttribute("style");
-      }
-    });
+    // window.addEventListener("scroll", () => {
+    //     let scrollY = window.pageYOffset;
+    //     if (scrollY > 55) {
+    //         menu.style.top = header.offsetHeight + "px";
+    //         menu.style.height = `calc(100vh - ${header.offsetHeight})`;
+    //     } else {
+    //         menu.removeAttribute("style");
+    //     }
+    // });
   } // Show search row in header
 
   {
@@ -116,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var datePicker = document.querySelector(".date-pick");
     var timeTabs = document.querySelectorAll(".date-pick-time .time-item");
     var inputsBlock = document.querySelector(".cart__data-date-inputs");
+    var inputs = inputsBlock.querySelectorAll("input");
     var timeInput = document.getElementById("select_time");
     var editDate = document.getElementById("editDate");
     var confirm = document.querySelector(".date-pick__confirm");
@@ -167,6 +167,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // }
 
     });
+    inputs.forEach(function (input) {
+      input.addEventListener("click", function () {
+        datePicker.classList.add("show");
+      });
+    });
   } // Inputs validation 
 
   {
@@ -208,7 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
         errors[0].focus();
         return false;
       }
-    };
+    }; // On submit 
+
 
     submit.addEventListener("click", function (e) {
       e.preventDefault();
@@ -223,6 +229,32 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         document.getElementById("err").style.display = "block";
       }
+    }); // Allow only "-" and digits
+
+    var disableLetters = function disableLetters(input) {
+      var val = input.value;
+      var rep = /[\.;":'a-zA-Zа-яА-Я]/;
+
+      if (rep.test(val)) {
+        val = val.replace(rep, '');
+        input.value = val;
+      }
+    };
+
+    var inputsDisableLetters = document.querySelectorAll("input[name='apartament']");
+    inputsDisableLetters.forEach(function (input) {
+      input.addEventListener("keyup", function () {
+        disableLetters(input);
+      });
+    }); // Show a tip on apartament input focus
+
+    var inputApartament = document.querySelector("input[name='apartament']");
+    var informer = document.querySelector(".appartment-info-hidden");
+    inputApartament.addEventListener("focus", function () {
+      informer.classList.toggle("show");
+    });
+    inputApartament.addEventListener("blur", function () {
+      informer.classList.toggle("show");
     });
   } // add more items 
 
@@ -257,12 +289,15 @@ document.addEventListener("DOMContentLoaded", function () {
   } // apartment informer 
 
   {
-    var informer = document.getElementById("appartmentInfo");
+    var _informer = document.getElementById("appartmentInfo");
+
     var content = document.querySelector(".appartment-info-hidden");
-    informer.addEventListener("mouseover", function (e) {
+
+    _informer.addEventListener("mouseover", function (e) {
       content.classList.add("show");
     });
-    informer.addEventListener("mouseout", function (e) {
+
+    _informer.addEventListener("mouseout", function (e) {
       content.classList.remove("show");
     });
   } // anchors 
@@ -390,8 +425,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   {
     window.addEventListener("scroll", function (e) {
-      console.log(pageYOffset);
-
       if (window.innerWidth > 1170) {
         if (pageYOffset > 30) {
           document.querySelector(".cart__data").style.maxHeight = "calc(100vh - 80px)";
