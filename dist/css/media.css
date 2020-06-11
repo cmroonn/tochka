@@ -300,6 +300,8 @@
     font-size: 10px; }
   .subtitle {
     font-size: 16px; }
+  .vertical-divide {
+    margin: 0 4px; }
   .btn {
     font-size: 14px; }
   .cart__checkout-product .product-preview {
