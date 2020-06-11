@@ -435,5 +435,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+  } // Show some option if online payment is checked
+
+  {
+    var allPaymentRadio = document.querySelectorAll("input[name='payment']");
+    var onlinePayment = document.getElementById("onlinePayment");
+    var option = document.getElementById("leaveAtTheDoor");
+    allPaymentRadio.forEach(function (el) {
+      el.addEventListener("change", function () {
+        if (onlinePayment.checked) {
+          option.style.display = "flex";
+        } else {
+          option.style.display = "none";
+        }
+      });
+    });
   }
 });
