@@ -454,11 +454,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var makeFocus = function makeFocus(input) {
       input.focus();
+      console.log("asf");
     };
 
     allInput.forEach(function (input) {
       input.addEventListener("click", function (e) {
-        setTimeout(makeFocus, 500, input);
+        setTimeout(makeFocus, 1200, input);
       });
     });
   }
