@@ -450,5 +450,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+  } // Input settings 
+
+  {
+    var allInput = document.querySelectorAll(".cart__data input");
+    allInput.forEach(function (input) {
+      input.addEventListener("click", function (e) {
+        input.focus();
+      });
+    });
   }
 });
