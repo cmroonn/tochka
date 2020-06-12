@@ -456,7 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var allInput = document.querySelectorAll(".cart__data input");
     allInput.forEach(function (input) {
       input.addEventListener("click", function (e) {
-        input.focus();
+        setTimeout(input.foucs, 100);
       });
     });
   }
