@@ -418,9 +418,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     checkWindowWidth();
-    window.addEventListener("resize", function () {
-      checkWindowWidth();
-    });
   } // personal data block settings 
 
   {
