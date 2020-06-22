@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tochka | Payment</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="fonts/CeraPro/cera-pro.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <!-- Start content -->
+    <main class="main">
+
+        <!-- PAGE CONTENT -->
+        <section class="payment-page error">
+            <div class="container">
+
+                <div class="payment-page__wrapper">
+                    <!-- Logo -->
+                    <img src="img/logo.svg" alt="" class="payment-page__wrapper-logo">
+
+
+
+
+                    <div class="payment-page__wrapper-error">
+                        <img src="img/pic1.png" alt="" style="margin: auto;display:block;">
+
+                        <div class="payment-page__wrapper-error-heading">
+                            <h2 class="text-center" style="color: #FC5D5D;">
+                                Платеж не удалася
+                            </h2>
+    
+                            <p>
+                                Сейчас мы авторизуем Вашу карту, а после того как Ваш заказ будет собран и отправиться к Вам, мы спишем сумму заказа.
+                            </p>
+                        </div>
+
+                        <button class="btn">
+                            Попробовать еще раз
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="cart-warning d-flex ai-center payment-page__secure">
+                    <div class="d-flex ai-center">
+                        <img src="img/icons/lock_icon.svg" alt="">
+
+                        <p>
+                            Платеж безопасен
+                        </p>
+                    </div>
+
+                    <div class="icons" style="margin-left: auto;">
+                        <img src="img/icons/verified_visa.svg" alt="">
+
+                        <img src="img/icons/mcard_secure.svg" alt="">
+                    </div>
+                </div>
+
+
+                <footer class="footer">
+                    <p>
+                        Магазин онлайн доставки ТОЧКА
+                    </p>
+
+                    <p>
+                        ИП Томина Ж.Н. <span class="fw-700">ОГРНИП 319565800088818</span>
+                    </p>
+
+                    <p>
+                        115280, г. Москва, ул. Велозаводская, д. 13, стр.1, пав. 329. Велозаводский рынок
+                    </p>
+
+                    <p class="fw-700">
+                        +7 (495) 364 19 19  |  hello@tochkamarket.ru
+                    </p>
+                </footer>
+
+            </div>
+        </section>
+        <!-- PAGE CONTENT ENDS -->
+
+        <form name="errorForm" action="#" method="post" id="errorForm">
+            <input type="hidden" id="language" value="ru" type="hidden">
+        </form>
+        
+
+
+    </main>
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdn.sobekrepository.org/includes/jquery-timers/1.2/jquery.timers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+</body>
+
+</html>

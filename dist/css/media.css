@@ -260,7 +260,83 @@
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0); }
     .delivery-info-body .cart-warning {
-      margin: 40px auto !important; } }
+      margin: 40px auto !important; }
+  /* Payment page */
+  .payment-page__wrapper {
+    padding: 0;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    border: unset;
+    margin: 30px auto; }
+  .payment-page__wrapper-orderNumber {
+    font-size: 36px; }
+    .payment-page__wrapper-orderNumber span {
+      font-size: 12px; }
+  .payment-page__wrapper-info-row span {
+    font-size: 12px; }
+  .payment-page__wrapper-info-row p {
+    font-size: 18px; }
+    .payment-page__wrapper-info-row p span {
+      font-size: 12px; }
+  .payment-page__card-heading h2 {
+    font-size: 18px; }
+  .payment-page__card-heading p {
+    font-size: 12px;
+    text-align: center; }
+  .payment-page__card-session p {
+    font-size: 12px; }
+  .payment-page__card-session .payment-page__card-session-timer {
+    font-size: 12px;
+    min-width: 54px;
+    height: 24px; }
+  .payment-page__card .cart-checkbox {
+    margin: auto; }
+  .payment-page__card-imitation {
+    padding: 15px 20px; }
+    .payment-page__card-imitation input, .payment-page__card-imitation select {
+      font-size: 12px; }
+  .payment-page__secure.cart-warning {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 30px; }
+    .payment-page__secure.cart-warning p {
+      font-size: 14px; }
+    .payment-page__secure.cart-warning .icons {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-right: auto; }
+  .payment-page__card-imitation-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .payment-systems {
+    margin-top: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    padding: 4px 10px; }
+    .payment-systems img {
+      max-width: 40px; }
+      .payment-systems img:last-child {
+        max-width: 25px; }
+  .payment-page .footer {
+    font-size: 12px; }
+  .payment-page__wrapper-error-heading p {
+    text-align: center;
+    font-size: 12px; } }
 
 @media screen and (max-width: 525px) {
   .container-unset-mob {

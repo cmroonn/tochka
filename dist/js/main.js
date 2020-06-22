@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.remove("disabled");
   };
 
+  if (window.innerWidth < 768) {
+    document.querySelectorAll("input").forEach(function (input) {
+      input.addEventListener("focus", function () {
+        document.querySelector(".header").style.marginTop = "-500px";
+      });
+      input.addEventListener("blur", function () {
+        document.querySelector(".header").style.marginTop = "0";
+      });
+    });
+  }
+
   document.addEventListener("keydown", function (e) {
     if (e.keyCode === 27) {
       allModals.forEach(function (modal) {

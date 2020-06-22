@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tochka | Payment</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="fonts/CeraPro/cera-pro.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <!-- Start content -->
+    <main class="main">
+
+        <!-- PAGE CONTENT -->
+        <section class="payment-page">
+            <div class="container">
+
+                <div class="payment-page__wrapper">
+                    <!-- Logo -->
+                    <img src="img/logo.svg" alt="" class="payment-page__wrapper-logo">
+
+                    <!-- Order number -->
+                    <div class="text-center fw-300 payment-page__wrapper-orderNumber">
+                        <span class="color-gray fw-400">
+                            Номер вашего заказа
+                        </span>
+
+                        <div id="orderNumber">
+                            №1001
+                        </div>
+                    </div>
+
+
+                    <!-- Payment info -->
+                    <div class="payment-page__wrapper-info">
+
+                        <!-- row -->
+                        <div class="dotted payment-page__wrapper-info-row">
+                            <div class="d-flex jc-between ai-center">
+                                <span>
+                                    Сумма платежа
+                                </span>
+
+                                <p id="amount">
+                                    15,980
+
+                                    <span class="color-gray">
+                                        ₽
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- row -->
+                        <div class="dotted payment-page__wrapper-info-row">
+                            <div class="d-flex jc-between ai-center">
+                                <span>
+                                    Описание платежа
+                                </span>
+
+                                <p class="fw-700">
+                                    <span id="description">
+                                        Hochu kushatz
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="cart-warning d-flex jc-between">
+                            <img src="img/icons/info_icon.svg" alt="info">
+
+                            <p>
+                                Напоминаем, что сумма списания возможно будет отличаться от суммы корзины после
+                                взвешивания выбранных Вами товаров
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <form class="payment-page__card" name="PaymentForm" action="#" method="post" id="formPayment">
+
+                        <input type="hidden" id="expiry">
+                        <input type="hidden" id="mdOrder">
+                        <input type="hidden" id="location" value="/../">
+                        <input type="hidden" id="language" value="ru">
+
+
+                        <div class="payment-page__card-heading">
+                            <h2 class="text-center" style="margin-bottom: 5px;">
+                                Ввод данных о карте
+                            </h2>
+
+                            <p class="color-gray">
+                                Сейчас мы авторизуем Вашу карту, а после того как Ваш заказ будет собран и отправиться к
+                                Вам, мы спишем сумму заказа.
+                            </p>
+                        </div>
+
+
+                        <div class="payment-page__card-session">
+                            <p class="fw-700">
+                                До окончания сессии осталось
+                            </p>
+
+                            <div class="d-flex ai-center jc-center payment-page__card-session-timer"
+                                id="numberCountdown">
+                                19:27
+                            </div>
+                        </div>
+
+                        <!-- checkbox -->
+                        <label class="jc-center cart-checkbox">
+                            <input type="checkbox" value="Сохранить данные карты для последующих покупок"
+                                id="createBinding">
+
+                            <span class="d-flex flex-column">
+                                Сохранить данные карты для последующих покупок
+                            </span>
+                        </label>
+
+                        <!-- Card imitation -->
+                        <div class="payment-page__card-imitation">
+                            <!-- Checkbox -->
+                            <label class="cart-input cart-input_card-number">
+                                <div class="icon">
+                                    <img src="img/icons/card_icon.svg" alt="">
+                                </div>
+                                <input type="text" placeholder="Номер карты*" required class="field" name="$PAN"
+                                    id="iPAN" maxlength="19" autocomplete="off">
+                            </label>
+
+
+                            <div class="d-flex" style="margin: 30px 0;">
+
+                                <!-- Checkbox -->
+                                <label class="cart-input" style="margin-right: 15px;">
+                                    <div class="icon">
+                                        <img src="img/icons/calendar_icon.svg" alt="">
+                                    </div>
+                                    
+                                    <select name="MM" id="month">
+                                        <option disabled selected>ММ</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                    </select>
+                                    <span style="opacity:.5;">/</span>
+                                    <select name="YYYY" id="year">
+                                        <option disabled selected>ГГГГ</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                    </select>
+                                </label>
+
+                                <!-- Checkbox -->
+                                <label class="cart-input">
+                                    <div class="icon">
+                                        <img src="img/icons/turncard_icon.svg" alt="">
+                                    </div>
+                                    <input type="password" placeholder="CVC*" required class="field" name="$CVC"
+                                        id="iCVC" maxlength="3" type="password" autocomplete="off" >
+                                </label>
+                            </div>
+
+
+                            <div class="d-flex jc-between payment-page__card-imitation-row">
+
+                                <!-- Checkbox -->
+                                <label class="cart-input" style="align-self: center;">
+                                    <div class="icon">
+                                        <img src="img/icons/user_icon.svg" alt="" style="opacity: .5;">
+                                    </div>
+                                    <input name="TEXT" id="iTEXT" maxlength="90" type="text" autocomplete="off"
+                                        name="cardholder" placeholder="Владелец карты" required class="field">
+                                </label>
+
+
+                                <div class="d-flex payment-systems">
+                                    <img src="img/icons/visa_icon.svg" alt="">
+
+                                    <img src="img/icons/mcard_icon.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card imitation ends -->
+
+
+
+                        <button type="button" id="buttonPayment" class="btn" style="max-width: 145px;
+                                                                 margin: 20px auto;
+                                                                 border: none;
+                                                                 height: 44px;">
+
+                            Оплатить
+                        </button>
+
+
+                        <div id="errorBlock" style="color:#FC5D5D;font-size: 12px; visibility: hidden;" class="text-center">
+                            Пожалуйста, проверьте правильность ввода данных
+                        </div>
+
+                    </form>
+
+                    <form id="acs" method="post" action="">
+                        <input type="hidden" id="MD" name="MD" />
+                        <input type="hidden" id="PaReq" name="PaReq" />
+                        <input type="hidden" id="TermUrl" name="TermUrl" />
+                    </form>
+                </div>
+
+
+                <div class="cart-warning d-flex ai-center payment-page__secure">
+                    <div class="d-flex ai-center">
+                        <img src="img/icons/lock_icon.svg" alt="">
+
+                        <p>
+                            Платеж безопасен
+                        </p>
+                    </div>
+
+                    <div class="icons">
+                        <img src="img/icons/verified_visa.svg" alt="">
+
+                        <img src="img/icons/mcard_secure.svg" alt="">
+                    </div>
+                </div>
+
+
+                <footer class="footer">
+                    <p>
+                        Магазин онлайн доставки ТОЧКА
+                    </p>
+
+                    <p>
+                        ИП Томина Ж.Н. <span class="fw-700">ОГРНИП 319565800088818</span>
+                    </p>
+
+                    <p>
+                        115280, г. Москва, ул. Велозаводская, д. 13, стр.1, пав. 329. Велозаводский рынок
+                    </p>
+
+                    <p class="fw-700">
+                        +7 (495) 364 19 19 | hello@tochkamarket.ru
+                    </p>
+                </footer>
+
+            </div>
+        </section>
+        <!-- PAGE CONTENT ENDS -->
+
+
+    </main>
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdn.sobekrepository.org/includes/jquery-timers/1.2/jquery.timers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+
+    <script>
+        $(document).payment({
+            language: "ru",
+            messageAjaxError: "Сервис временно недоступен. Попробуйте позднее.",
+            messageTimeRemaining: "#MIN#:#SEC#",
+            visualValidationEnabled: true,
+            agreementCheckboxEnabled: true,
+            bindingCheckboxEnabled: true,
+            getFeeEnabled: true
+        });
+    </script>
+</body>
+
+</html>
