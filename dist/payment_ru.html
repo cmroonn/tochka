@@ -119,15 +119,7 @@
                             </div>
                         </div>
 
-                        <!-- checkbox -->
-                        <label class="jc-center cart-checkbox">
-                            <input type="checkbox" value="Сохранить данные карты для последующих покупок"
-                                id="createBinding">
-
-                            <span class="d-flex flex-column">
-                                Сохранить данные карты для последующих покупок
-                            </span>
-                        </label>
+                
 
                         <!-- Card imitation -->
                         <div class="payment-page__card-imitation">
@@ -194,6 +186,16 @@
                             </div>
                         </div>
                         <!-- Card imitation ends -->
+
+                        <!-- checkbox -->
+                        <label class="jc-center cart-checkbox">
+                            <input type="checkbox" value="Сохранить данные карты для последующих покупок"
+                                id="createBinding">
+
+                            <span class="d-flex flex-column">
+                                Сохранить данные карты для последующих покупок
+                            </span>
+                        </label>
 
 
 
@@ -286,13 +288,19 @@
     <script>
         var cardHolderInput = document.getElementById("iTEXT");
 
+        cardHolderInput.addEventListener('keyup', () => {
+            cardHolderInput.value = cardHolderInput.value.toUpperCase();
+        });
+
         cardHolderInput.addEventListener('keypress', (e) => {
+
             var keyCode = e.keyCode || e.which; // Код символа
 
-            if (!/[A-Z ]/.test(String.fromCharCode(keyCode)) ||
-                (/[ ]/.test(cardHolderInput.value) && keyCode === 32)) {
+            if ( !/[A-Z ]/.test(String.fromCharCode(keyCode)) && 
+                 !/[a-z]/.test(String.fromCharCode(keyCode)) ||
+                 (/[ ]/.test(cardHolderInput.value) && keyCode === 32) ) {
                     e.preventDefault(); // Если условие выполнилось, то запрещаем ввод символа
-                }
+            } 
                 
         });
     </script>
