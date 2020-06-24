@@ -148,7 +148,7 @@
                                     <div class="icon">
                                         <img src="img/icons/calendar_icon.svg" alt="">
                                     </div>
-                                    
+
                                     <select name="MM" id="month">
                                         <option disabled selected>ММ</option>
                                         <option value="01">01</option>
@@ -169,7 +169,7 @@
                                         <img src="img/icons/turncard_icon.svg" alt="">
                                     </div>
                                     <input type="password" placeholder="CVC*" required class="field" name="$CVC"
-                                        id="iCVC" maxlength="3" type="password" autocomplete="off" >
+                                        id="iCVC" maxlength="3" type="password" autocomplete="off">
                                 </label>
                             </div>
 
@@ -206,7 +206,8 @@
                         </button>
 
 
-                        <div id="errorBlock" style="color:#FC5D5D;font-size: 12px; visibility: hidden;" class="text-center">
+                        <div id="errorBlock" style="color:#FC5D5D;font-size: 12px; visibility: hidden;"
+                            class="text-center">
                             Пожалуйста, проверьте правильность ввода данных
                         </div>
 
@@ -279,6 +280,20 @@
             agreementCheckboxEnabled: true,
             bindingCheckboxEnabled: true,
             getFeeEnabled: true
+        });
+    </script>
+
+    <script>
+        var cardHolderInput = document.getElementById("iTEXT");
+
+        cardHolderInput.addEventListener('keypress', (e) => {
+            var keyCode = e.keyCode || e.which; // Код символа
+
+            if (!/[A-Z ]/.test(String.fromCharCode(keyCode)) ||
+                (/[ ]/.test(cardHolderInput.value) && keyCode === 32)) {
+                    e.preventDefault(); // Если условие выполнилось, то запрещаем ввод символа
+                }
+                
         });
     </script>
 </body>
