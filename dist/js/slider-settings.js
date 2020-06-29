@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 5,
         slidesPerGroup: 5
       },
-      1170: {
+      1000: {
         slidesPerView: 4,
         slidesPerGroup: 4,
         allowTouchMove: false
@@ -96,12 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
       1400: {
         slidesPerView: 3,
         slidesPerGroup: 3,
-        spaceBetween: 14
+        spaceBetween: 14,
+        slidesPerColumn: 1
       },
       1170: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 30,
+        slidesPerColumn: 1,
         allowTouchMove: false
       }
     }
