@@ -54,18 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
   } // Show search row in header
 
   {
-    var _button = document.getElementById("searchButton");
-
     var closeButton = document.getElementById("close-search");
     var searchRow = document.getElementById("searchRow");
-
-    _button.addEventListener("click", function (e) {
-      e.preventDefault();
-      searchRow.classList.toggle("show");
+    searchRow.addEventListener("keyup", function () {
+      searchRow.value === "" ? closeButton.classList.remove("show") : closeButton.classList.add("show");
     });
-
-    closeButton.addEventListener("click", function (e) {
-      searchRow.classList.remove("show");
+    closeButton.addEventListener("click", function () {
+      searchRow.value = "";
+      closeButton.classList.remove("show");
     });
   } // Notification window
 
@@ -96,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   {
-    var _button2 = document.getElementById("nearDelivery");
+    var _button = document.getElementById("nearDelivery");
 
     var modal = document.querySelector(".delivery-info");
     var closeBtn = document.querySelector(".delivery-info-close");
 
-    _button2.addEventListener("click", function () {
+    _button.addEventListener("click", function () {
       modal.classList.add("show");
       bodyAddDisabled();
     });
@@ -119,70 +115,69 @@ document.addEventListener("DOMContentLoaded", function () {
   } // Date picker
 
   {
-    var _button3 = document.getElementById("date-picker");
+    try {
+      var _button2 = document.getElementById("date-picker");
 
-    var _closeButton = document.querySelector(".date-pick .close-window");
+      var _closeButton = document.querySelector(".date-pick .close-window");
 
-    var datePicker = document.querySelector(".date-pick");
-    var timeTabs = document.querySelectorAll(".date-pick-time .time-item");
-    var inputsBlock = document.querySelector(".cart__data-date-inputs");
-    var inputs = inputsBlock.querySelectorAll("input");
-    var timeInput = document.getElementById("select_time");
-    var editDate = document.getElementById("editDate");
-    var confirm = document.querySelector(".date-pick__confirm");
+      var datePicker = document.querySelector(".date-pick");
+      var timeTabs = document.querySelectorAll(".date-pick-time .time-item");
+      var inputsBlock = document.querySelector(".cart__data-date-inputs");
+      var inputs = inputsBlock.querySelectorAll("input");
+      var timeInput = document.getElementById("select_time");
+      var editDate = document.getElementById("editDate");
+      var confirm = document.querySelector(".date-pick__confirm");
 
-    _button3.addEventListener("click", function (e) {
-      e.preventDefault();
-      datePicker.classList.add("show");
-      inputsBlock.classList.add("show");
-      _button3.style.display = "none";
-      bodyAddDisabled();
-    });
-
-    _closeButton.addEventListener("click", function () {
-      datePicker.classList.remove("show");
-      bodyRemoveDisabled();
-    });
-
-    confirm.addEventListener("click", function () {
-      datePicker.classList.remove("show");
-      bodyRemoveDisabled();
-    });
-    timeTabs.forEach(function (elem) {
-      elem.addEventListener("click", function () {
-        timeTabs.forEach(function (el) {
-          return el.classList.remove("active");
-        }); // remove class active from all elems
-
-        elem.classList.add("active");
-        timeInput.setAttribute("value", "".concat(elem.innerText)); // set time in input 
+      _button2.addEventListener("click", function (e) {
+        e.preventDefault();
+        datePicker.classList.add("show");
+        inputsBlock.classList.add("show");
+        _button2.style.display = "none";
+        bodyAddDisabled();
       });
-    });
-    editDate.addEventListener("click", function (e) {
-      e.preventDefault();
-      datePicker.classList.add("show"); // show date picker
 
-      bodyAddDisabled();
-    });
-    datePicker.addEventListener("click", function (e) {
-      var target = e.target;
-      var children = datePicker.children;
-
-      if (target == datePicker) {
+      _closeButton.addEventListener("click", function () {
         datePicker.classList.remove("show");
         bodyRemoveDisabled();
-      } // for(let i = 0; i < children.length; i++) {
-      //     if(target !== children[i]) {
-      //         datePicker.classList.remove("show");
-      //     }
-      // }
-
-    });
-    inputs.forEach(function (input) {
-      input.addEventListener("click", function () {
-        datePicker.classList.add("show");
       });
-    });
+
+      confirm.addEventListener("click", function () {
+        datePicker.classList.remove("show");
+        bodyRemoveDisabled();
+      });
+      timeTabs.forEach(function (elem) {
+        elem.addEventListener("click", function () {
+          timeTabs.forEach(function (el) {
+            return el.classList.remove("active");
+          }); // remove class active from all elems
+
+          elem.classList.add("active");
+          timeInput.setAttribute("value", "".concat(elem.innerText)); // set time in input 
+        });
+      });
+      editDate.addEventListener("click", function (e) {
+        e.preventDefault();
+        datePicker.classList.add("show"); // show date picker
+
+        bodyAddDisabled();
+      });
+      datePicker.addEventListener("click", function (e) {
+        var target = e.target;
+        var children = datePicker.children;
+
+        if (target == datePicker) {
+          datePicker.classList.remove("show");
+          bodyRemoveDisabled();
+        }
+      });
+      inputs.forEach(function (input) {
+        input.addEventListener("click", function () {
+          datePicker.classList.add("show");
+        });
+      });
+    } catch (_unused) {
+      return false;
+    }
   } // Inputs validation 
 
   {
