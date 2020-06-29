@@ -263,6 +263,10 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
+  .main-page__season-offer__products .product-card {
+    margin: auto; }
+    .main-page__season-offer__products .product-card:last-child {
+      margin-right: auto; }
   .main-page__season-offer__content__banner {
     margin-right: 0;
     width: 100%;
