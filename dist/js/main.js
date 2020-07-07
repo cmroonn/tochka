@@ -217,6 +217,19 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
       } else {
         errors[0].focus();
+        errors.forEach(function (error) {
+          var input = error.querySelector("input");
+          input.addEventListener("keyup", function (e) {
+            // if input has been changed remove class error
+            console.log(input.value);
+
+            if (input.value !== "") {
+              error.classList.remove("error");
+            } else {
+              error.classList.add("error");
+            }
+          });
+        });
         return false;
       }
     }; // On submit 
@@ -257,10 +270,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var inputApartament = document.querySelector("input[name='apartament']");
     var informer = document.querySelector(".appartment-info-hidden");
     inputApartament.addEventListener("focus", function () {
-      informer.classList.toggle("show");
+      informer.classList.add("show");
     });
     inputApartament.addEventListener("blur", function () {
-      informer.classList.toggle("show");
+      informer.classList.remove("show");
+    });
+    inputApartament.addEventListener("keyup", function () {
+      console.log(inputApartament.value);
+
+      if (inputApartament.value) {
+        document.querySelector("#appartmentInfo").style.display = "none";
+        informer.classList.remove("show");
+      } else {
+        document.querySelector("#appartmentInfo").style.display = "block";
+      }
     });
   } // add more items 
 

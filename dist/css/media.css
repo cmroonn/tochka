@@ -354,10 +354,6 @@
     box-shadow: unset;
     border: unset;
     margin: 30px auto; }
-  .payment-page__wrapper-orderNumber {
-    font-size: 36px; }
-    .payment-page__wrapper-orderNumber span {
-      font-size: 12px; }
   .payment-page__wrapper-info-row span {
     font-size: 12px; }
   .payment-page__wrapper-info-row p {

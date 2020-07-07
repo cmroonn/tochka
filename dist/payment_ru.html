@@ -26,17 +26,19 @@
             <div class="container">
 
                 <div class="payment-page__wrapper">
-                    <!-- Logo -->
-                    <img src="img/logo.svg" alt="" class="payment-page__wrapper-logo">
+                    <div class="d-flex flex-column payment-page__heading">
+                        <!-- Logo -->
+                        <img src="img/logo.svg" alt="" class="payment-page__wrapper-logo">
 
-                    <!-- Order number -->
-                    <div class="text-center fw-300 payment-page__wrapper-orderNumber">
-                        <span class="color-gray fw-400">
-                            Номер вашего заказа
-                        </span>
+                        <!-- Order number -->
+                        <div class="text-center fw-300 payment-page__wrapper-orderNumber">
+                            <span class="color-gray fw-400">
+                                Номер вашего заказа
+                            </span>
 
-                        <div id="orderNumber">
-                            №1001
+                            <div id="orderNumber">
+                                №1001
+                            </div>
                         </div>
                     </div>
 
@@ -119,7 +121,7 @@
                             </div>
                         </div>
 
-                
+
 
                         <!-- Card imitation -->
                         <div class="payment-page__card-imitation">
@@ -187,10 +189,12 @@
                         </div>
                         <!-- Card imitation ends -->
 
+                        <div id="infoBlock" class="text-center" style="margin: 10px 0;"></div>
+
                         <!-- checkbox -->
                         <label class="jc-center cart-checkbox">
                             <input type="checkbox" value="Сохранить данные карты для последующих покупок"
-                                id="createBinding">
+                                id="createBinding" checked>
 
                             <span class="d-flex flex-column">
                                 Сохранить данные карты для последующих покупок
@@ -207,6 +211,14 @@
                             Оплатить
                         </button>
 
+                        <p class="text-center payment-offer">
+                            <input type="checkbox" class="checkbox" id="iAgree" checked
+                                style="visibility: hidden; z-index: -1;">
+                            Нажимая кнопку «Оплатить», вы соглашаетесь с
+                            <a href="#" class="dotted fw-700" style="display: inline-block;">
+                                офертой
+                            </a>
+                        </p>
 
                         <div id="errorBlock" style="color:#FC5D5D;font-size: 12px; visibility: hidden;"
                             class="text-center">
@@ -296,12 +308,12 @@
 
             var keyCode = e.keyCode || e.which; // Код символа
 
-            if ( !/[A-Z ]/.test(String.fromCharCode(keyCode)) && 
-                 !/[a-z]/.test(String.fromCharCode(keyCode)) ||
-                 (/[ ]/.test(cardHolderInput.value) && keyCode === 32) ) {
-                    e.preventDefault(); // Если условие выполнилось, то запрещаем ввод символа
-            } 
-                
+            if (!/[A-Z ]/.test(String.fromCharCode(keyCode)) &&
+                !/[a-z]/.test(String.fromCharCode(keyCode)) ||
+                (/[ ]/.test(cardHolderInput.value) && keyCode === 32)) {
+                e.preventDefault(); // Если условие выполнилось, то запрещаем ввод символа
+            }
+
         });
     </script>
 </body>
