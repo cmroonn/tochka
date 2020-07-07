@@ -134,11 +134,9 @@
     display: none; }
   .footer__menu-wrap,
   .footer__logo,
-  .footer__contacts,
-  .footer__payment {
+  .footer__contacts {
     margin: auto; }
   .footer__payment {
-    margin-top: 10px;
     margin-bottom: 10px;
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
@@ -155,8 +153,6 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-  .footer__contacts-socials {
-    margin-bottom: 10px; }
   .footer__menu-wrap {
     margin-bottom: 35px; }
   .notification-popup {
@@ -448,8 +444,6 @@
     margin: 0 20px; }
   .footer__down .footer__privacy-links li a {
     font-size: 12px; }
-  .footer__payment img {
-    width: 100%; }
   .footer {
     margin-top: 0; }
   .footer-wrapper {

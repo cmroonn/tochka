@@ -476,20 +476,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-  } // Fix bug with android keyboard
-
-  {
-    var allInput = document.querySelectorAll(".cart__data input");
-
-    var makeFocus = function makeFocus(input) {
-      input.focus();
-      console.log("asf");
-    };
-
-    allInput.forEach(function (input) {
-      input.addEventListener("click", function (e) {
-        setTimeout(makeFocus, 1200, input);
-      });
-    });
   }
 });
