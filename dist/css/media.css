@@ -349,7 +349,7 @@
     -webkit-box-shadow: unset;
     box-shadow: unset;
     border: unset;
-    margin: 30px auto; }
+    margin: 10px auto; }
   .payment-page__wrapper-info-row span {
     font-size: 12px; }
   .payment-page__wrapper-info-row p {
@@ -370,7 +370,7 @@
   .payment-page__card .cart-checkbox {
     margin: auto; }
   .payment-page__card-imitation {
-    padding: 15px 20px; }
+    padding: 10px 20px 5px; }
     .payment-page__card-imitation input,
     .payment-page__card-imitation select {
       font-size: 12px; }
