@@ -2072,7 +2072,8 @@ textarea {
   @media screen and (max-width: 550px) {
     .payment-page__wrapper-info .cart-warning {
       padding-top: 7px;
-      padding-bottom: 7px; } }
+      padding-bottom: 7px;
+      margin-top: 10px; } }
 
 .payment-page__wrapper-info-row {
   width: 100%; }
@@ -2121,7 +2122,7 @@ textarea {
     font-size: 14px; }
   @media screen and (max-width: 768px) {
     .payment-page__card-session {
-      margin-bottom: 0px; } }
+      margin: 0; } }
 
 .payment-page__card-session-timer {
   border-radius: 5px;
@@ -2244,7 +2245,7 @@ textarea {
       font-size: 10px; } }
 
 .valid {
-  borer-bottom: 1px solid rgba(20, 20, 20, 0.2); }
+  border-bottom: 1px solid rgba(20, 20, 20, 0.2); }
 
 .invalid {
   border-bottom: 1px solid #FC5D5D; }
@@ -2706,7 +2707,8 @@ textarea {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin: 40px 0; }
 
 .main-page__about__content {
   max-width: 550px;
@@ -2735,10 +2737,38 @@ textarea {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
   .main-page__about__media-content img {
     width: 100%;
     max-width: 779px; }
+  .main-page__about__media-content iframe {
+    width: 100%;
+    height: 450px; }
+  @media screen and (max-width: 1170px) {
+    .main-page__about__media-content {
+      width: 100%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-bottom: 40px; }
+      .main-page__about__media-content iframe {
+        width: 80%; } }
+    @media screen and (max-width: 1170px) and (max-width: 768px) {
+      .main-page__about__media-content iframe {
+        height: 250px; } }
+  @media screen and (max-width: 1170px) and (max-width: 768px) and (max-width: 480px) {
+    .main-page__about__media-content iframe {
+      height: 150px;
+      width: 100%; } }
   .main-page__about__media-content .play-btn {
     width: 92px;
     position: absolute;
