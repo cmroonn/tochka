@@ -2195,7 +2195,7 @@ textarea {
 .payment-page__secure.cart-warning {
   margin: auto;
   padding: 20px 65px;
-  max-width: 560px; }
+  max-width: 690px; }
   .payment-page__secure.cart-warning .icons {
     margin-left: auto; }
 
@@ -2245,7 +2245,9 @@ textarea {
     .payment-page__wrapper-orderNumber #orderNumber {
       font-size: 22px; }
     .payment-page__wrapper-orderNumber span {
-      font-size: 10px; } }
+      font-size: 10px; }
+  .payment-page__secure img {
+    max-width: 80px !important; } }
 
 .valid {
   border-bottom: 1px solid rgba(20, 20, 20, 0.2); }
