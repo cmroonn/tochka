@@ -185,6 +185,8 @@
                                         <img src="img/icons/visa_icon.svg" alt="">
     
                                         <img src="img/icons/mcard_icon.svg" alt="">
+
+                                        <img src="img/icons/mir_icon.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -286,6 +288,7 @@
     <script src="http://cdn.sobekrepository.org/includes/jquery-timers/1.2/jquery.timers.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
     <script>
         $(document).payment({
@@ -316,6 +319,17 @@
                 e.preventDefault(); // Если условие выполнилось, то запрещаем ввод символа
             }
 
+        });
+
+        $(function() {
+            var options =  {
+            onKeyPress: function(cep, e, field, options) {
+                var masks = ['0000 0000 0000 0000', '0000 0000 0000 000000'];
+                var mask = (cep.length>16) ? masks[1] : masks[0];
+                $('#iPAN').mask(mask, options);
+            }};
+
+            $('#iPAN').mask('0000 0000 0000 0000', options);
         });
     </script>
 </body>

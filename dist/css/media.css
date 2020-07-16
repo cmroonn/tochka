@@ -410,8 +410,6 @@
     padding: 4px 10px; }
     .payment-systems img {
       max-width: 40px; }
-      .payment-systems img:last-child {
-        max-width: 25px; }
   .payment-page .footer {
     font-size: 12px; }
   .payment-page__wrapper-error-heading p {
