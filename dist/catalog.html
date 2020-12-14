@@ -13,6 +13,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -293,9 +294,21 @@
         <div class="catalog">
             <div class="catalog__brands">
                 <div class="container">
-                    <h2 class="subtitle">
-                        Хочу заказать продукты от
-                    </h2>
+                    <div class="catalog__brands__head">
+                        <h2 class="subtitle">
+                            Хочу заказать продукты от
+                        </h2>
+
+                        <div class="catalog__informer">
+                            <img src="img/icons/info_icon.svg" alt="informer" id="appartmentInfo" class="appartment-info">
+
+                            <div class="catalog__informer-content catalog__informer-content-hidden">
+                                Мы бесплатно упакуем ваш заказ в
+                                <span>ЭКО</span> сумку, без использования пакетов. При получении заказа вам нужно всего лишь
+                                выложить товар, и отдать ЭКО сумку курьеру, для сохранения ее для следующих ваших покупок
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="catalog__brands-wrap">
                         <a href="#" class="catalog__brands-wrap__item">
@@ -488,38 +501,10 @@
                             <p class="d-flex ai-center jc-between filter_block__heading">
                                 Бренд
 
-                                <svg
-                                        class="close_icon"
-                                        width="12"
-                                        height="4"
-                                        viewBox="0 0 12 4"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            opacity="0.5"
-                                            d="M10.8 0.799805C11.4627 0.799805 12 1.33706 12 1.9998C12 2.66255 11.4627 3.19981 10.8 3.19981L1.2 3.1998C0.537259 3.1998 -2.80979e-08 2.66255 0 1.9998C2.80979e-08 1.33706 0.537258 0.799805 1.2 0.799805L10.8 0.799805Z"
-                                            fill="#434343"
-                                    ></path>
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
                                 </svg>
 
-                                <svg
-                                        class="open_icon"
-                                        width="12"
-                                        height="12"
-                                        viewBox="0 0 12 12"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            d="M10.8 4.8C11.4627 4.8 12 5.33726 12 6C12 6.66274 11.4627 7.2 10.8 7.2L1.2 7.2C0.537259 7.2 -2.80979e-08 6.66274 0 6C2.80979e-08 5.33726 0.537258 4.8 1.2 4.8L10.8 4.8Z"
-                                            fill="#434343"
-                                    ></path>
-                                    <path
-                                            d="M7.2 10.8C7.2 11.4627 6.66274 12 6 12C5.33726 12 4.8 11.4627 4.8 10.8L4.8 1.2C4.8 0.537259 5.33726 -5.61958e-08 6 0C6.66274 5.61958e-08 7.2 0.537258 7.2 1.2L7.2 10.8Z"
-                                            fill="#434343"
-                                    ></path>
-                                </svg>
                             </p>
 
                             <div class="filter_block__points">
@@ -553,38 +538,10 @@
                             <p class="d-flex ai-center jc-between filter_block__heading">
                                 Цена
 
-                                <svg
-                                        class="close_icon"
-                                        width="12"
-                                        height="4"
-                                        viewBox="0 0 12 4"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            opacity="0.5"
-                                            d="M10.8 0.799805C11.4627 0.799805 12 1.33706 12 1.9998C12 2.66255 11.4627 3.19981 10.8 3.19981L1.2 3.1998C0.537259 3.1998 -2.80979e-08 2.66255 0 1.9998C2.80979e-08 1.33706 0.537258 0.799805 1.2 0.799805L10.8 0.799805Z"
-                                            fill="#434343"
-                                    ></path>
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
                                 </svg>
 
-                                <svg
-                                        class="open_icon"
-                                        width="12"
-                                        height="12"
-                                        viewBox="0 0 12 12"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            d="M10.8 4.8C11.4627 4.8 12 5.33726 12 6C12 6.66274 11.4627 7.2 10.8 7.2L1.2 7.2C0.537259 7.2 -2.80979e-08 6.66274 0 6C2.80979e-08 5.33726 0.537258 4.8 1.2 4.8L10.8 4.8Z"
-                                            fill="#434343"
-                                    ></path>
-                                    <path
-                                            d="M7.2 10.8C7.2 11.4627 6.66274 12 6 12C5.33726 12 4.8 11.4627 4.8 10.8L4.8 1.2C4.8 0.537259 5.33726 -5.61958e-08 6 0C6.66274 5.61958e-08 7.2 0.537258 7.2 1.2L7.2 10.8Z"
-                                            fill="#434343"
-                                    ></path>
-                                </svg>
                             </p>
 
                             <div class="filter_block__points">
@@ -604,38 +561,10 @@
                             <p class="d-flex ai-center jc-between filter_block__heading">
                                 Харкатеристика
 
-                                <svg
-                                        class="close_icon"
-                                        width="12"
-                                        height="4"
-                                        viewBox="0 0 12 4"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            opacity="0.5"
-                                            d="M10.8 0.799805C11.4627 0.799805 12 1.33706 12 1.9998C12 2.66255 11.4627 3.19981 10.8 3.19981L1.2 3.1998C0.537259 3.1998 -2.80979e-08 2.66255 0 1.9998C2.80979e-08 1.33706 0.537258 0.799805 1.2 0.799805L10.8 0.799805Z"
-                                            fill="#434343"
-                                    ></path>
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
                                 </svg>
 
-                                <svg
-                                        class="open_icon"
-                                        width="12"
-                                        height="12"
-                                        viewBox="0 0 12 12"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                            d="M10.8 4.8C11.4627 4.8 12 5.33726 12 6C12 6.66274 11.4627 7.2 10.8 7.2L1.2 7.2C0.537259 7.2 -2.80979e-08 6.66274 0 6C2.80979e-08 5.33726 0.537258 4.8 1.2 4.8L10.8 4.8Z"
-                                            fill="#434343"
-                                    ></path>
-                                    <path
-                                            d="M7.2 10.8C7.2 11.4627 6.66274 12 6 12C5.33726 12 4.8 11.4627 4.8 10.8L4.8 1.2C4.8 0.537259 5.33726 -5.61958e-08 6 0C6.66274 5.61958e-08 7.2 0.537258 7.2 1.2L7.2 10.8Z"
-                                            fill="#434343"
-                                    ></path>
-                                </svg>
                             </p>
 
                             <div class="filter_block__points">
@@ -954,6 +883,51 @@
                         </div>
 
                     </div>
+                </section>
+
+
+                <section class="any-questions">
+
+                    <img src="img/any-q.png" alt="" class="any-questions__image">
+
+
+                    <form class="any-questions__form">
+
+                        <h3 class="any-questions__form__heading">
+                            Не знаете что выбрать?
+                            <span>Мы поможем!</span>
+                        </h3>
+
+                        <p class="any-questions__form__desc">
+                            Оставьте заявку, и наш менеджер свяжется с вами для подбора и заказа нужного товара.
+                        </p>
+
+                        <label class="cart-input">
+                            <div class="icon">
+                                <img src="img/icons/user_icon.svg" alt="user">
+                            </div>
+                            <input type="text" name="name" placeholder="Имя и фамилия" class="field" tabindex="0">
+                        </label>
+
+                        <label class="cart-input">
+                            <div class="icon">
+                                <img src="img/icons/phone_icon.svg" alt="phone">
+                            </div>
+                            <input type="text" name="phone" placeholder="Телефон*" required class="field" tabindex="0">
+                        </label>
+
+                        <label class="cart-input">
+                            <div class="icon">
+                                <img src="img/icons/mail_icon.svg" alt="email">
+                            </div>
+                            <input type="text" name="email" placeholder="E-mail*" required class="field"
+                                   tabindex="0">
+                        </label>
+
+                        <button type="submit" class="btn">
+                            Отправить
+                        </button>
+                    </form>
                 </section>
             </div>
         </div>
@@ -2193,13 +2167,48 @@
             console.log(e);
         }
 
+        try {
+            const openFiltersButton = document.querySelectorAll(
+                ".catalog__btnFilters"
+            );
+            const filters = document.querySelector(".catalog__content__filters");
+
+            openFiltersButton.forEach((el) => {
+                el.addEventListener("click", () => {
+                    filters.classList.toggle("show");
+                });
+            });
+        } catch (e) {
+            console.log(e);
+        }
+
     </script>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     <script src="js/slider-settings.js"></script>
     <script src="js/main.js"></script>
+
+
+    <script>
+        $(function () {
+            $("#slider-price").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $("#price-min").val(ui.values[0]);
+                    $("#price-max").val(ui.values[1]);
+                },
+            });
+            $("#price-min").val($("#slider-price").slider("values", 0));
+            $("#price-max").val($("#slider-price").slider("values", 1));
+        });
+    </script>
 </body>
 
 </html>
