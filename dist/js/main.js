@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       button.classList.toggle("menu-btn-active");
       body.classList.toggle("disabled");
       menu.classList.toggle("show");
-    }); // set new styles if scrolling down 
+    }); // set new styles if scrolling down
     // window.addEventListener("scroll", () => {
     //     let scrollY = window.pageYOffset;
     //     if (scrollY > 55) {
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }); // remove class active from all elems
 
           elem.classList.add("active");
-          timeInput.setAttribute("value", "".concat(elem.innerText)); // set time in input 
+          timeInput.setAttribute("value", "".concat(elem.innerText)); // set time in input
         });
       });
       editDate.addEventListener("click", function (e) {
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (_unused) {
       return false;
     }
-  } // Inputs validation 
+  } // Inputs validation
 
   {
     var form = document.querySelector(".cart");
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         return false;
       }
-    }; // On submit 
+    }; // On submit
 
 
     submit.addEventListener("click", function (e) {
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#appartmentInfo").style.display = "block";
       }
     });
-  } // add more items 
+  } // add more items
 
   {
     var plus = document.querySelectorAll(".plusCount");
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return el.parentElement.children[1].value = value;
       }
     };
-  } // apartment informer 
+  } // apartment informer
 
   {
     var _informer = document.getElementById("appartmentInfo");
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
     _informer.addEventListener("mouseout", function (e) {
       content.classList.remove("show");
     });
-  } // anchors 
+  } // anchors
 
   {
     $(".anchor").on("click", function (event) {
@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-  } // SMS sender settings 
+  } // SMS sender settings
 
   {
     $.ajax({
@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     checkWindowWidth();
-  } // personal data block settings 
+  } // personal data block settings
 
   {
     window.addEventListener("scroll", function (e) {

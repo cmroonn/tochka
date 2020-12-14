@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tochka | Main</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="fonts/CeraPro/cera-pro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <!-- Start content -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="header__top">
+                <div class="container header__top-wrapper">
+                    <div class="d-flex flex-column-mob">
+                        <div class="d-flex header__top-nearest-delivery">
+                            Ближайшая доставка:
+
+                            <span id="nearDelivery" class="dotted blinking">
+                                <!-- Время -->
+                                Сегодня с
+                                12:00
+                            </span>
+                        </div>
+
+                        <div class="d-flex header__top-nearest-delivery">
+                            Город:
+
+                            <span id="usersCity" class="dotted">
+                                <!-- Город -->
+                                Москва
+                            </span>
+                        </div>
+                    </div>
+
+                    <ul class="d-flex ai-center header__top-menu">
+                        <li>
+                            <a href="#">
+                                Новинки
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Акции
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Блог
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="header__top-contacts">
+                        <!-- <a href="tel:8999999999" class="header__top-contacts-phone">
+                            <img src="img/icons/phone_icon.svg" alt="phone-icon">
+                            + 7 (066) 364 19 19
+                        </a> -->
+
+                        <div class="header__top-contacts-socials">
+                            <a href="#">
+                                <img src="img/icons/instagram_icon.svg" alt="instagram">
+                            </a>
+
+                            <a href="#">
+                                <img src="img/icons/fb_icon.svg" alt="facebook">
+                            </a>
+
+                            <a href="#">
+                                <img src="img/icons/vk_icon.svg" alt="vkontakte">
+                            </a>
+
+                            <a href="#">
+                                <img src="img/icons/iconmonstr-telegram-1.svg" alt="telegram"
+                                    style="width: 20px;height:20px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="header__menu">
+                    <a href="#" class="header__menu-logo">
+                        <img src="img/logo.svg" alt="tochka-market">
+                    </a>
+
+                    <!-- <ul class="header__menu-nav">
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                Каталог
+                                <img src="img/icons/arrow-down_icon.svg" alt="arrow">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                Новинки
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                Акции
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                Блог
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                О доставке
+                            </a>
+                        </li>
+                    </ul> -->
+
+                    <a href="#" class="header__menu-catalog">
+                        <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="21" height="2" fill="#141414" />
+                            <rect y="5" width="21" height="2" fill="#141414" />
+                            <rect y="10" width="21" height="2" fill="#141414" />
+                        </svg>
+
+                        Каталог
+                    </a>
+
+
+                    <form class="d-flex ai-center search-box">
+                        <input type="search" placeholder="Я ищу..." id="searchRow" autocomplete="off">
+                        <div class="close-search" id="close-search"></div>
+                        <button type="submit">
+                            <img src="img/icons/search_icon.svg" alt="search">
+                        </button>
+                    </form>
+
+                    <ul class="header__menu-profile">
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                <img src="img/icons/favorites_icon.svg" alt="favorites">
+                            </a>
+                        </li>
+
+                        <li class="showCartHint">
+                            <a href="#" class="header-menu-point">
+                                <img src="img/icons/cart_icon.svg" alt="cart">
+
+                                <span class="header-menu-counter">
+                                    99+
+                                </span>
+                            </a>
+
+                            <div class="cart-hint">
+                                <div class="cart-hint__row dotted">
+                                    <div class="d-flex jc-between">
+                                        <p>
+                                            В корзине:
+                                        </p>
+
+                                        <p>
+                                            <span>7</span>
+
+                                            товаров
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="cart-hint__row dotted">
+                                    <div class="d-flex jc-between">
+                                        <p>
+                                            На сумму:
+                                        </p>
+
+                                        <p>
+                                            <span>1.890</span>
+
+                                            ₽
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn cart-hint__btn">
+                                    Оформить заказ
+
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-menu-point">
+                                <img src="img/icons/user_icon.svg" alt="user">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--
+                    <a href="#" class="header-menu-point header__menu-search" id="searchButton">
+                        <img src="img/icons/search_icon.svg" alt="search">
+                    </a>
+
+                    <form class="d-flex ai-center search-box" id="searchRow">
+                        <input type="search" placeholder="Поиск товаров">
+                        <div class="close-search" id="close-search"></div>
+                        <button type="submit">
+                            <img src="img/icons/search_icon.svg" alt="search">
+                        </button>
+                    </form> -->
+
+                </div>
+
+                <div class="d-flex jc-between ai-center header__menu-mob">
+                    <a href="#" class="menu-btn">
+                        <span></span>
+                    </a>
+
+                    <a href="#" class="header__menu-logo">
+                        <img src="img/logo.svg" alt="tochka-market">
+                    </a>
+
+                    <a href="#" class="header-menu-point header__menu-search">
+                        <img src="img/icons/search_icon.svg" alt="search">
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="header__personal-mob">
+                <div class="container d-flex jc-between">
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/cat_icon.svg" alt="category">
+                        </div>
+                        Каталог
+                    </a>
+
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/favorites_icon.svg" alt="favorite">
+                        </div>
+                        Избранное
+                    </a>
+
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/cart_icon.svg" alt="category">
+
+                            <span class="header-menu-counter">
+                                99+
+                            </span>
+                        </div>
+                        Корзина
+
+
+                    </a>
+
+                    <a href="#" class="d-flex flex-column ai-center header__personal-mob-point">
+                        <div class="d-flex ai-center jc-center point-icon">
+                            <img src="img/icons/user_icon.svg" alt="category">
+                        </div>
+                        Кабинет
+                    </a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="catalog">
+            <div class="catalog__brands">
+                <div class="container">
+                    <h2 class="subtitle">
+                        Хочу заказать продукты от
+                    </h2>
+
+                    <div class="catalog__brands-wrap">
+                        <a href="#" class="catalog__brands-wrap__item">
+                            <img src="img/brands/auchan.svg" alt="">
+                        </a>
+
+                        <a href="#" class="catalog__brands-wrap__item">
+                            <img src="img/brands/vkusvil.svg" alt="">
+                        </a>
+
+                        <a href="#" class="catalog__brands-wrap__item">
+                            <img src="img/brands/metro.svg" alt="">
+                        </a>
+
+                        <a href="#" class="catalog__brands-wrap__item">
+                            <img src="img/brands/danilovskiy.png" alt="">
+                        </a>
+
+                        <a href="#" class="catalog__brands-wrap__item">
+                            <img src="img/brands/dolgovmirovsky.svg" alt="">
+                        </a>
+
+                        <a href="#" class="catalog__brands-wrap__item">
+                            <img src="img/brands/velozavodsky.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- control panel -->
+                <section class="catalog__control-panel">
+                    <!-- count items to show -->
+                    <div class="catalog__control-panel__show">
+                        Показывать:
+
+                        <ul>
+                            <li class="active">
+                                <a href="#">18</a>
+                            </li>
+                            <li>
+                                <a href="#">24</a>
+                            </li>
+                            <li>
+                                <a href="#">36</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex ai-center">
+                        <!-- sort items by -->
+                        <div class="catalog__control-panel__sort">
+                            Сортировать:
+
+                            <select>
+                                <option value="По умолчанию">по умолчанию</option>
+
+                                <option value="По цене">по цене</option>
+                            </select>
+                        </div>
+
+                        <button class="catalog__control-panel__reset">
+                            <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                                <rect width="18" height="18" fill="url(#pattern0)" />
+                                <defs>
+                                    <pattern
+                                            id="pattern0"
+                                            patternContentUnits="objectBoundingBox"
+                                            width="1"
+                                            height="1"
+                                    >
+                                        <use xlink:href="#image0" transform="scale(0.002)" />
+                                    </pattern>
+                                    <image
+                                            id="image0"
+                                            width="500"
+                                            height="500"
+                                            xlink:href="data:image/png;base64,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"
+                                    />
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- main content -->
+                <section class="catalog__content">
+                    <!-- filters -->
+                    <div class="catalog__content__filters">
+                        <button type="button" class="catalog__btnFilters">Закрыть</button>
+                        <!-- active filters -->
+                        <div class="catalog__content__filters__active">
+                            <div class="active_filter">
+                                <p>Цена</p>
+
+                                <span> 500 - 1500 Р </span>
+
+                                <button class="active_filter__remove">
+                                    <svg
+                                            width="10"
+                                            height="10"
+                                            viewBox="0 0 10 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g opacity="0.3">
+                                            <path
+                                                    d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
+                                                    fill="#393840"
+                                            ></path>
+                                            <path
+                                                    d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
+                                                    fill="#393840"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="active_filter">
+                                <p>Объем</p>
+
+                                <span> 25 - 45 ml </span>
+
+                                <button class="active_filter__remove">
+                                    <svg
+                                            width="10"
+                                            height="10"
+                                            viewBox="0 0 10 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g opacity="0.3">
+                                            <path
+                                                    d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
+                                                    fill="#393840"
+                                            ></path>
+                                            <path
+                                                    d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
+                                                    fill="#393840"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="remove_all_filters">
+                                <button class="d-flex ai-center jc-center">
+                                    <svg
+                                            width="10"
+                                            height="10"
+                                            viewBox="0 0 10 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g opacity="0.5">
+                                            <path
+                                                    d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
+                                                    fill="#393840"
+                                            ></path>
+                                            <path
+                                                    d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
+                                                    fill="#393840"
+                                            ></path>
+                                        </g>
+                                    </svg>
+
+                                    Сбросить всё
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- all filters -->
+
+                        <div class="filter_block">
+                            <p class="d-flex ai-center jc-between filter_block__heading">
+                                Бренд
+
+                                <svg
+                                        class="close_icon"
+                                        width="12"
+                                        height="4"
+                                        viewBox="0 0 12 4"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            opacity="0.5"
+                                            d="M10.8 0.799805C11.4627 0.799805 12 1.33706 12 1.9998C12 2.66255 11.4627 3.19981 10.8 3.19981L1.2 3.1998C0.537259 3.1998 -2.80979e-08 2.66255 0 1.9998C2.80979e-08 1.33706 0.537258 0.799805 1.2 0.799805L10.8 0.799805Z"
+                                            fill="#434343"
+                                    ></path>
+                                </svg>
+
+                                <svg
+                                        class="open_icon"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            d="M10.8 4.8C11.4627 4.8 12 5.33726 12 6C12 6.66274 11.4627 7.2 10.8 7.2L1.2 7.2C0.537259 7.2 -2.80979e-08 6.66274 0 6C2.80979e-08 5.33726 0.537258 4.8 1.2 4.8L10.8 4.8Z"
+                                            fill="#434343"
+                                    ></path>
+                                    <path
+                                            d="M7.2 10.8C7.2 11.4627 6.66274 12 6 12C5.33726 12 4.8 11.4627 4.8 10.8L4.8 1.2C4.8 0.537259 5.33726 -5.61958e-08 6 0C6.66274 5.61958e-08 7.2 0.537258 7.2 1.2L7.2 10.8Z"
+                                            fill="#434343"
+                                    ></path>
+                                </svg>
+                            </p>
+
+                            <div class="filter_block__points">
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Марс </span>
+                                </label>
+
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Сникерс </span>
+                                </label>
+
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Баунти </span>
+                                </label>
+
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Киндер </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter_block">
+                            <p class="d-flex ai-center jc-between filter_block__heading">
+                                Цена
+
+                                <svg
+                                        class="close_icon"
+                                        width="12"
+                                        height="4"
+                                        viewBox="0 0 12 4"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            opacity="0.5"
+                                            d="M10.8 0.799805C11.4627 0.799805 12 1.33706 12 1.9998C12 2.66255 11.4627 3.19981 10.8 3.19981L1.2 3.1998C0.537259 3.1998 -2.80979e-08 2.66255 0 1.9998C2.80979e-08 1.33706 0.537258 0.799805 1.2 0.799805L10.8 0.799805Z"
+                                            fill="#434343"
+                                    ></path>
+                                </svg>
+
+                                <svg
+                                        class="open_icon"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            d="M10.8 4.8C11.4627 4.8 12 5.33726 12 6C12 6.66274 11.4627 7.2 10.8 7.2L1.2 7.2C0.537259 7.2 -2.80979e-08 6.66274 0 6C2.80979e-08 5.33726 0.537258 4.8 1.2 4.8L10.8 4.8Z"
+                                            fill="#434343"
+                                    ></path>
+                                    <path
+                                            d="M7.2 10.8C7.2 11.4627 6.66274 12 6 12C5.33726 12 4.8 11.4627 4.8 10.8L4.8 1.2C4.8 0.537259 5.33726 -5.61958e-08 6 0C6.66274 5.61958e-08 7.2 0.537258 7.2 1.2L7.2 10.8Z"
+                                            fill="#434343"
+                                    ></path>
+                                </svg>
+                            </p>
+
+                            <div class="filter_block__points">
+                                <div class="filter_block__slider">
+                                    <div id="slider-price"></div>
+
+                                    <div class="filter_block__slider__res">
+                                        <input id="price-min" readonly></input>
+                                        –
+                                        <input id="price-max" readonly></input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter_block show">
+                            <p class="d-flex ai-center jc-between filter_block__heading">
+                                Харкатеристика
+
+                                <svg
+                                        class="close_icon"
+                                        width="12"
+                                        height="4"
+                                        viewBox="0 0 12 4"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            opacity="0.5"
+                                            d="M10.8 0.799805C11.4627 0.799805 12 1.33706 12 1.9998C12 2.66255 11.4627 3.19981 10.8 3.19981L1.2 3.1998C0.537259 3.1998 -2.80979e-08 2.66255 0 1.9998C2.80979e-08 1.33706 0.537258 0.799805 1.2 0.799805L10.8 0.799805Z"
+                                            fill="#434343"
+                                    ></path>
+                                </svg>
+
+                                <svg
+                                        class="open_icon"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            d="M10.8 4.8C11.4627 4.8 12 5.33726 12 6C12 6.66274 11.4627 7.2 10.8 7.2L1.2 7.2C0.537259 7.2 -2.80979e-08 6.66274 0 6C2.80979e-08 5.33726 0.537258 4.8 1.2 4.8L10.8 4.8Z"
+                                            fill="#434343"
+                                    ></path>
+                                    <path
+                                            d="M7.2 10.8C7.2 11.4627 6.66274 12 6 12C5.33726 12 4.8 11.4627 4.8 10.8L4.8 1.2C4.8 0.537259 5.33726 -5.61958e-08 6 0C6.66274 5.61958e-08 7.2 0.537258 7.2 1.2L7.2 10.8Z"
+                                            fill="#434343"
+                                    ></path>
+                                </svg>
+                            </p>
+
+                            <div class="filter_block__points">
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Фермерская </span>
+                                </label>
+
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Кошерная </span>
+                                </label>
+
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Халяль </span>
+                                </label>
+
+                                <label class="checkbox filter_block__point">
+                                    <input type="checkbox" name="size" />
+
+                                    <span> Без лактозы </span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- products -->
+                    <div class="catalog__content__prods">
+                        <button type="button" class="catalog__btnFilters">
+                            <svg
+                                    width="8"
+                                    height="6"
+                                    viewBox="0 0 8 6"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M3.60356 0.138673C3.79227 0.32357 3.79227 0.623347 3.60356 0.808244L1.84989 2.52655L7.5168 2.5266C7.78367 2.5266 8 2.73858 8 3.00006C8 3.26154 7.78366 3.47352 7.51679 3.47351L1.84991 3.47347L3.60356 5.19176C3.79227 5.37665 3.79227 5.67643 3.60356 5.86133C3.41486 6.04622 3.10892 6.04622 2.92021 5.86133L0 3L2.92021 0.138673C3.10892 -0.0462242 3.41486 -0.0462242 3.60356 0.138673Z"
+                                        fill="#393840"
+                                />
+                            </svg>
+
+                            Открыть фильтры
+                        </button>
+                        <div class="catalog__content__prods_wrap">
+                            <div class="sales-item__product">
+                                <div class="sales-item__product__preview">
+                                    <img src="img/prods/img-1.png" alt="">
+
+                                    <!-- favorite button -->
+                                    <button type="button" class="sales-item__product__favorite">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M10.7143 3.85995L9.92324 2.98102C8.21688 1.08506 5.81032 0.660584 3.97154 1.42301C2.19813 2.15833 0.733134 4.10253 1.12882 7.46594C1.36608 9.48273 2.89378 11.5877 4.99064 13.4894C6.86696 15.1912 9.05198 16.5976 10.7143 17.479C12.3766 16.5976 14.5616 15.1912 16.4379 13.4894C18.5348 11.5877 20.0625 9.48273 20.2998 7.46594C20.6954 4.10253 19.2304 2.15833 17.457 1.42301C15.6183 0.660584 13.2117 1.08506 11.5053 2.98101L10.7143 3.85995ZM10.7143 18.6762C7.16683 16.9024 0.639591 12.4162 0.0718619 7.59029C-0.760845 0.51201 5.83462 -1.87481 9.94667 1.53121C10.2139 1.75259 10.4707 1.99845 10.7143 2.26907C10.9579 1.99845 11.2146 1.75259 11.4819 1.53121C15.5939 -1.87481 22.1894 0.51201 21.3567 7.59029C20.789 12.4162 14.2618 16.9024 10.7143 18.6762Z" fill="#141414"/>
+                                        </svg>
+                                    </button>
+
+                                    <div class="sales-item__product__sales">
+                                        <div class="sales-item__product__sales__sale">
+                                            -25%
+                                        </div>
+
+                                        <div class="sales-item__product__sales__supplier">
+                                            ВкусВилл
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="sales-item__product__info">
+                                    <div class="sales-item__product__info-row">
+                                        <div class="product-card__price">
+                                            <div class="d-flex flex-column product-card__price-sale">
+                                    <span class="product-card__price-sale-old">
+                                        1297
+                                    </span>
+                                                <div style="margin: auto;">
+                                        <span class="color-green">
+                                            870
+                                        </span>
+                                                    <span class="product-card__price-currency">
+                                            ₽
+                                        </span>
+                                                </div>
+                                            </div>
+
+                                            <span class="product-card__price__count">
+                                    / кг
+                                </span>
+                                        </div>
+
+                                        <button class="text-uppercase btn" style="display: none;">
+                                            купить
+                                        </button>
+
+                                        <!-- COUNTER -->
+                                        <div class="sales-item__product__count-block">
+                                    <span class="minusCount">
+                                        <img src="img/icons/remove.svg" alt="remove">
+                                    </span>
+
+                                            <input class="count" type="num" value="1" readonly>
+
+                                            <span class="plusCount">
+                                        <img src="img/icons/add_icon.svg" alt="add">
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <h3>Чипсы с солью и перцем чили “Пакет картошки” ~ 100гр</h3>
+                                </div>
+                            </div>
+
+                            <div class="sales-item__product">
+                                <div class="sales-item__product__preview">
+                                    <img src="img/prods/img-1.png" alt="">
+
+                                    <!-- favorite button -->
+                                    <button type="button" class="sales-item__product__favorite">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M10.7143 3.85995L9.92324 2.98102C8.21688 1.08506 5.81032 0.660584 3.97154 1.42301C2.19813 2.15833 0.733134 4.10253 1.12882 7.46594C1.36608 9.48273 2.89378 11.5877 4.99064 13.4894C6.86696 15.1912 9.05198 16.5976 10.7143 17.479C12.3766 16.5976 14.5616 15.1912 16.4379 13.4894C18.5348 11.5877 20.0625 9.48273 20.2998 7.46594C20.6954 4.10253 19.2304 2.15833 17.457 1.42301C15.6183 0.660584 13.2117 1.08506 11.5053 2.98101L10.7143 3.85995ZM10.7143 18.6762C7.16683 16.9024 0.639591 12.4162 0.0718619 7.59029C-0.760845 0.51201 5.83462 -1.87481 9.94667 1.53121C10.2139 1.75259 10.4707 1.99845 10.7143 2.26907C10.9579 1.99845 11.2146 1.75259 11.4819 1.53121C15.5939 -1.87481 22.1894 0.51201 21.3567 7.59029C20.789 12.4162 14.2618 16.9024 10.7143 18.6762Z" fill="#141414"/>
+                                        </svg>
+                                    </button>
+
+                                    <div class="sales-item__product__sales">
+                                        <div class="sales-item__product__sales__sale">
+                                            -25%
+                                        </div>
+
+                                        <div class="sales-item__product__sales__supplier">
+                                            ВкусВилл
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="sales-item__product__info">
+                                    <div class="sales-item__product__info-row">
+                                        <div class="product-card__price">
+                                            <div class="d-flex flex-column product-card__price-sale">
+                                    <span class="product-card__price-sale-old">
+                                        1297
+                                    </span>
+                                                <div style="margin: auto;">
+                                        <span class="color-green">
+                                            870
+                                        </span>
+                                                    <span class="product-card__price-currency">
+                                            ₽
+                                        </span>
+                                                </div>
+                                            </div>
+
+                                            <span class="product-card__price__count">
+                                    / кг
+                                </span>
+                                        </div>
+
+                                        <button class="text-uppercase btn" style="display: none;">
+                                            купить
+                                        </button>
+
+                                        <!-- COUNTER -->
+                                        <div class="sales-item__product__count-block">
+                                    <span class="minusCount">
+                                        <img src="img/icons/remove.svg" alt="remove">
+                                    </span>
+
+                                            <input class="count" type="num" value="1" readonly>
+
+                                            <span class="plusCount">
+                                        <img src="img/icons/add_icon.svg" alt="add">
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <h3>Чипсы с солью и перцем чили “Пакет картошки” ~ 100гр</h3>
+                                </div>
+                            </div>
+
+                            <div class="sales-item__product">
+                                <div class="sales-item__product__preview">
+                                    <img src="img/prods/img-1.png" alt="">
+
+                                    <!-- favorite button -->
+                                    <button type="button" class="sales-item__product__favorite">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M10.7143 3.85995L9.92324 2.98102C8.21688 1.08506 5.81032 0.660584 3.97154 1.42301C2.19813 2.15833 0.733134 4.10253 1.12882 7.46594C1.36608 9.48273 2.89378 11.5877 4.99064 13.4894C6.86696 15.1912 9.05198 16.5976 10.7143 17.479C12.3766 16.5976 14.5616 15.1912 16.4379 13.4894C18.5348 11.5877 20.0625 9.48273 20.2998 7.46594C20.6954 4.10253 19.2304 2.15833 17.457 1.42301C15.6183 0.660584 13.2117 1.08506 11.5053 2.98101L10.7143 3.85995ZM10.7143 18.6762C7.16683 16.9024 0.639591 12.4162 0.0718619 7.59029C-0.760845 0.51201 5.83462 -1.87481 9.94667 1.53121C10.2139 1.75259 10.4707 1.99845 10.7143 2.26907C10.9579 1.99845 11.2146 1.75259 11.4819 1.53121C15.5939 -1.87481 22.1894 0.51201 21.3567 7.59029C20.789 12.4162 14.2618 16.9024 10.7143 18.6762Z" fill="#141414"/>
+                                        </svg>
+                                    </button>
+
+                                    <div class="sales-item__product__sales">
+                                        <div class="sales-item__product__sales__sale">
+                                            -25%
+                                        </div>
+
+                                        <div class="sales-item__product__sales__supplier">
+                                            ВкусВилл
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="sales-item__product__info">
+                                    <div class="sales-item__product__info-row">
+                                        <div class="product-card__price">
+                                            <div class="d-flex flex-column product-card__price-sale">
+                                    <span class="product-card__price-sale-old">
+                                        1297
+                                    </span>
+                                                <div style="margin: auto;">
+                                        <span class="color-green">
+                                            870
+                                        </span>
+                                                    <span class="product-card__price-currency">
+                                            ₽
+                                        </span>
+                                                </div>
+                                            </div>
+
+                                            <span class="product-card__price__count">
+                                    / кг
+                                </span>
+                                        </div>
+
+                                        <button class="text-uppercase btn" style="display: none;">
+                                            купить
+                                        </button>
+
+                                        <!-- COUNTER -->
+                                        <div class="sales-item__product__count-block">
+                                    <span class="minusCount">
+                                        <img src="img/icons/remove.svg" alt="remove">
+                                    </span>
+
+                                            <input class="count" type="num" value="1" readonly>
+
+                                            <span class="plusCount">
+                                        <img src="img/icons/add_icon.svg" alt="add">
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <h3>Чипсы с солью и перцем чили “Пакет картошки” ~ 100гр</h3>
+                                </div>
+                            </div>
+
+                            <div class="sales-item__product">
+                                <div class="sales-item__product__preview">
+                                    <img src="img/prods/img-1.png" alt="">
+
+                                    <!-- favorite button -->
+                                    <button type="button" class="sales-item__product__favorite">
+                                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M10.7143 3.85995L9.92324 2.98102C8.21688 1.08506 5.81032 0.660584 3.97154 1.42301C2.19813 2.15833 0.733134 4.10253 1.12882 7.46594C1.36608 9.48273 2.89378 11.5877 4.99064 13.4894C6.86696 15.1912 9.05198 16.5976 10.7143 17.479C12.3766 16.5976 14.5616 15.1912 16.4379 13.4894C18.5348 11.5877 20.0625 9.48273 20.2998 7.46594C20.6954 4.10253 19.2304 2.15833 17.457 1.42301C15.6183 0.660584 13.2117 1.08506 11.5053 2.98101L10.7143 3.85995ZM10.7143 18.6762C7.16683 16.9024 0.639591 12.4162 0.0718619 7.59029C-0.760845 0.51201 5.83462 -1.87481 9.94667 1.53121C10.2139 1.75259 10.4707 1.99845 10.7143 2.26907C10.9579 1.99845 11.2146 1.75259 11.4819 1.53121C15.5939 -1.87481 22.1894 0.51201 21.3567 7.59029C20.789 12.4162 14.2618 16.9024 10.7143 18.6762Z" fill="#141414"/>
+                                        </svg>
+                                    </button>
+
+                                    <div class="sales-item__product__sales">
+                                        <div class="sales-item__product__sales__sale">
+                                            -25%
+                                        </div>
+
+                                        <div class="sales-item__product__sales__supplier">
+                                            ВкусВилл
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="sales-item__product__info">
+                                    <div class="sales-item__product__info-row">
+                                        <div class="product-card__price">
+                                            <div class="d-flex flex-column product-card__price-sale">
+                                    <span class="product-card__price-sale-old">
+                                        1297
+                                    </span>
+                                                <div style="margin: auto;">
+                                        <span class="color-green">
+                                            870
+                                        </span>
+                                                    <span class="product-card__price-currency">
+                                            ₽
+                                        </span>
+                                                </div>
+                                            </div>
+
+                                            <span class="product-card__price__count">
+                                    / кг
+                                </span>
+                                        </div>
+
+                                        <button class="text-uppercase btn" style="display: none;">
+                                            купить
+                                        </button>
+
+                                        <!-- COUNTER -->
+                                        <div class="sales-item__product__count-block">
+                                    <span class="minusCount">
+                                        <img src="img/icons/remove.svg" alt="remove">
+                                    </span>
+
+                                            <input class="count" type="num" value="1" readonly>
+
+                                            <span class="plusCount">
+                                        <img src="img/icons/add_icon.svg" alt="add">
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <h3>Чипсы с солью и перцем чили “Пакет картошки” ~ 100гр</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+        <footer class="footer" id="footer">
+            <div class="container footer-wrapper">
+                <div class="footer__row">
+                    <a href="/" class="footer__logo">
+                        <img src="img/logo.svg" alt="logo">
+                    </a>
+
+                    <div class="footer__contacts">
+                        <a href="tel:89999999999" class="fw-300 footer-phone-desc">
+                            <img src="img/icons/phone_icon.svg" alt="phone">
+                            + 7 (066) 364 19 19
+                        </a>
+
+                        <div class="d-flex ai-center footer__contacts-socials">
+                            <a href="#">
+                                <img src="img/icons/instagram_icon-black.svg" alt="instagram">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/fb_icon-black.svg" alt="facebook">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/vk_icon-black.svg" alt="vk">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/yandex_dzen_icon.svg" alt="dzen">
+                            </a>
+                            <a href="#">
+                                <img src="img/icons/youtube_icon.svg" alt="youtube">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jc-between footer__row">
+                    <div class="footer__menu-wrap">
+                        <ul class="footer__menu">
+                            <li>
+                                <a href="#">
+                                    Контакты
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Доставка и оплата
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Как вернуть или обменять
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Программа лояльности
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    О проекте
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Сертификаты
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Поставщикам
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Реквизиты
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Эко инициативы
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Фонд содействия развитию
+                                    сельского хозяйства
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Для бизнеса
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+
+                    </div>
+
+                    <a href="tel:89999999999" class="ai-center jc-center footer-phone-mob">
+                        <img src="img/icons/phone_icon.svg" alt="phone">
+                        + 7 (066) 364 19 19
+                    </a>
+
+                    <div class="d-flex ai-center footer__contacts-socials footer__contacts-socials-mob">
+                        <a href="#">
+                            <img src="img/icons/instagram_icon-black.svg" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/fb_icon-black.svg" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/vk_icon-black.svg" alt="vk">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/yandex_dzen_icon.svg" alt="dzen">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/youtube_icon.svg" alt="youtube">
+                        </a>
+                    </div>
+
+                    <div class="footer__payment">
+                        <p>
+                            Мы принимаем:
+                        </p>
+
+                        <div class="footer__payment__item">
+                            <img src="img/icons/apple-black.svg" alt="">
+                        </div>
+
+                        <div class="footer__payment__item">
+                            <img src="img/icons/gpay.svg" alt="">
+                        </div>
+
+                        <div class="footer__payment__item">
+                            <img src="img/icons/samsung-black.svg" alt="">
+                        </div>
+
+                        <div class="footer__payment__item">
+                            <img src="img/icons/visa-black.svg" alt="">
+                        </div>
+
+                        <div class="footer__payment__item">
+                            <img src="img/icons/mc-black.svg" alt="">
+                        </div>
+
+                        <div class="footer__payment__item">
+                            <img src="img/icons/mir-black.svg" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="footer__ask">
+                        <h5>
+                            Остались вопросы?
+                        </h5>
+
+                        <p>
+                            Задайте их нам прямо сейчас
+                        </p>
+
+                        <a href="#" class="fw-300 btn footer__question">
+                            Задать вопрос
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex jc-between ai-center container footer__down">
+                <p class="footer__copy fw-300 color-gray">
+                    © Магазин ТОЧКА 2014-2019
+                </p>
+
+                <ul class="footer__privacy-links">
+                    <li>
+                        <a href="#" class="fw-300">
+                            Пользовательское соглашение
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="fw-300">
+                            Политика обработки персональных данных
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+
+
+
+    </main>
+
+    <div class="mobile-menu" id="mob-menu">
+        <ul class="d-flex flex-column ai-center mobile-nav">
+            <li>
+                <a href="#">
+                    Новости
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Акции
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Блог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Доставка и оплата
+                </a>
+            </li>
+        </ul>
+
+        <div class="flex-column ai-center">
+            <a href="tel:8999999999" class="jc-center header__top-contacts-phone" style="margin-bottom: 20px;">
+                <img src="img/icons/phone_icon.svg" alt="phone-icon">
+                + 7 (066) 364 19 19
+            </a>
+
+            <div class="jc-center d-flex">
+                <a href="#">
+                    <img src="img/icons/instagram_icon-black.svg" alt="instagram">
+                    <img src="img/icons/fb_icon-black.svg" alt="facebook">
+                    <img src="img/icons/vk_icon-black.svg" alt="vkontakte">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex ai-center jc-between notification-popup">
+        <div class="close-popup closePopup" id="closeNotification"></div>
+        <div class="notification-text">
+            <h2 class="subtitle">
+                Хотим чтобы вы знали.
+            </h2>
+            <p class="d-flex">
+                Просматривая этот сайт, вы соглашаетесь с нашей
+                <a href="#" class="color-gray dotted text-uppercase fw-700">
+                    Политикой конфиденциальности
+                </a>
+            </p>
+        </div>
+
+        <a href="#" class="btn closePopup" id="privacySubmit">
+            Принять
+        </a>
+    </div>
+
+
+
+    <!-- Choose City -->
+
+    <div class="choose-city">
+        <p>
+            Ваш город: <span class="fw-700">Москва?</span>
+        </p>
+
+        <a href="#" class="btn" id="citySubmit">
+            Да
+        </a>
+
+        <a href="#" class="dotted text-uppercase color-gray fw-700" id="chooseCity">
+            Выбрать другой город
+        </a>
+
+        <span class="triangle"></span>
+    </div>
+
+
+    <div class="choose-city_popup">
+
+        <!-- Desktop -->
+        <div class="choose-city_popup-desk">
+
+            <div class="close">
+                <img src="img/icons/remove_icon.svg" alt="close">
+            </div>
+
+            <div class="choose-city_popup-head">
+                <img src="img/icons/place.svg" alt="place">
+
+                <h3>
+                    Выбор города
+                </h3>
+
+                <p class="color-gray">
+                    Введите название Вашего города или выберите из списка возможных городов для того чтобы наши
+                    менеджеры подобрали для вас оптимальные варианты доставки
+                </p>
+            </div>
+
+            <div class="cart-input choose-city_popup-search">
+                <img src="img/icons/marker_icon.svg" alt="marker">
+                <input type="text" name="choose-city" placeholder="Ваш город...">
+            </div>
+
+            <div class="choose-city_popup-body">
+                <!-- City block-->
+                <div class="choose-city_popup-block">
+                    <h4>
+                        <span class="dotted">
+                            Москва
+                        </span>
+                    </h4>
+
+                    <h4>
+                        Московская область
+                    </h4>
+
+                    <div class="city_lists">
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                А
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                Б
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Балашиха
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Бронницы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Верея
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Видное
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Волоколамск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Воскресенск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Высоковск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- City block-->
+                <div class="choose-city_popup-block">
+                    <h4>
+                        <span class="dotted">
+                            Москва
+                        </span>
+                    </h4>
+
+                    <h4>
+                        Московская область
+                    </h4>
+
+                    <div class="city_lists">
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                А
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                Б
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Балашиха
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Бронницы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Верея
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Видное
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Волоколамск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Воскресенск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Высоковск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- City block-->
+                <div class="choose-city_popup-block">
+                    <h4>
+                        <span class="dotted">
+                            Москва
+                        </span>
+                    </h4>
+
+                    <h4>
+                        Московская область
+                    </h4>
+
+                    <div class="city_lists">
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                А
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                Б
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Балашиха
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Бронницы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Верея
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Видное
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Волоколамск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Воскресенск
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Высоковск
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="city_list">
+                            <p class="fw-700 city_list-letter">
+                                В
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="color-gray dotted">
+                                        Апрелевка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="choose-city_popup-body choose-city_popup-body-mob">
+                <div class="choose-city_block">
+                    <h4>
+                        А
+                    </h4>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Абакан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алдан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Альметьевск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Актау
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алматы
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Ангарск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Агинское
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алейск
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="choose-city_block">
+                    <h4>
+                        Б
+                    </h4>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Абакан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алдан
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Альметьевск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Актау
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алматы
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Ангарск
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Агинское
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Алейск
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- choose city popup ends -->
+
+
+    <!-- delivery info popup -->
+    <div class="delivery-info">
+        <div class="delivery-info-body">
+            <div class="delivery-info-close">
+                <img src="img/icons/remove_icon.svg" alt="close">
+            </div>
+
+            <!-- content -->
+            <div class="delivery-info__content">
+                <h3 class="text-center delivery-info__title">
+                    Доставка продуктов на дом, в офис, на дачу или в любое другое удобное для вас место
+                </h3>
+
+                <p class="fw-300 text-center delivery-info__subtitle">
+                    осуществляется в пределах Москвы и Московской области.
+                </p>
+
+
+                <div class="d-flex delivery-info__horizontal-content">
+                    <div class="delivery-info__content-item">
+                        <h4>
+                            Выбирайте подходящий для вас сервис и оформляйте заказ:
+                        </h4>
+
+                        <div class="numbered-list">
+                            <div class="numbered-list__block">
+                                <div class="d-flex ai-center">
+                                    <div class="num">
+                                        1
+                                    </div>
+
+                                    <p class="fw-300">
+                                        Быстрая доставка из магазина за 2 часа.
+                                    </p>
+                                </div>
+
+                                <div class="numbered-list__block-tip">
+                                    <span class="fw-700">
+                                        Доставка доступна для районов:
+                                    </span>
+
+                                    <ul>
+                                        <li>
+                                            Рублево-Успенское шоссе – от Барвихи до Синьково
+                                        </li>
+
+                                        <li>
+                                            Можайское шоссе – от Одинцово до Жаворонок
+                                        </li>
+
+                                        <li>
+                                            Боровское шоссе – Переделкино до Крекшино
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="numbered-list__block">
+                                <div class="d-flex ai-center">
+                                    <div class="num">
+                                        2
+                                    </div>
+
+                                    <p class="fw-300">
+                                        Доставка в продуктоматы, где вы можете забрать свой заказ самостоятельно в любое
+                                        удобное время.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="numbered-list__block">
+                                <div class="d-flex ai-center">
+                                    <div class="num">
+                                        3
+                                    </div>
+
+                                    <p class="fw-300">
+                                        Самовывоз алкоголя из Энотеки на Кутузовском проспекте, 18.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delivery-info__content-item delivery-info__time">
+                        <div class="delivery-info__time-block">
+                            <h4>
+                                О времени доставки
+                            </h4>
+
+                            <p class="fw-300 delivery-info__time-block-desc">
+                                Мы готовы доставить ваш заказ в день его оформления или в другой удобный для вас день в
+                                течение недели после оформления на сайте.
+                            </p>
+
+                            <div
+                                class="d-flex jc-between ai-center delivery-info__time-block-item delivery-info__shipping-time">
+                                <span class="fw-500">
+                                    Возможное время для доставки:
+                                </span>
+
+                                <span class="fw-300 shipping-time">
+                                    10:00 — 20:00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="delivery-info__time-block">
+                            <h4>
+                                Оплата
+                            </h4>
+
+                            <div class="d-flex jc-between ai-center delivery-info__time-block-item">
+                                <span class="fw-700 text">
+                                    Наличными
+
+                                    <span class="fw-300">
+                                        при получении
+                                    </span>
+                                </span>
+
+                                <span class="num">
+                                    1.
+                                </span>
+                            </div>
+
+
+                            <div class="d-flex jc-between ai-center delivery-info__time-block-item">
+                                <span class="fw-700 text">
+                                    Безналичный платеж
+
+                                    <span class="fw-300">
+                                        при получении
+                                    </span>
+                                </span>
+
+                                <span class="num">
+                                    2.
+                                </span>
+                            </div>
+
+                            <div class="d-flex jc-between ai-center delivery-info__time-block-item">
+                                <span class="fw-700 text">
+                                    <span class="fw-300">
+                                        Онлайн оплата картой
+                                    </span>
+
+                                    Visa / Mastercard
+                                </span>
+
+                                <span class="num">
+                                    3.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- warning -->
+                <div class="cart-warning d-flex jc-between" style="max-width: 850px; margin: 130px auto;">
+                    <img src="img/icons/info_icon.svg" alt="info">
+
+                    <p>
+                        Вы можете ввести несколько адресов доставки в личном кабинете интернет-магазина и выбрать нужный
+                        при совершении покупки.
+                    </p>
+                </div>
+
+
+                <!-- delivery cost -->
+
+                <div class="delivery-info__cost">
+                    <h3 class="text-center delivery-info__title">
+                        Стоимость доставки
+                    </h3>
+
+
+
+                    <div class="jc-between delivery-info__cost-blocks">
+
+                        <!-- block -->
+                        <div class="d-flex flex-column delivery-info__cost-block">
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-500">
+                                    В пределах
+                                    <br>
+                                    МКАД
+                                </p>
+                            </div>
+
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-300">
+                                    <span class="fw-500">
+                                        300
+                                    </span>
+                                    рублей - при заказ от
+                                    <span class="fw-500">
+                                        2500
+                                    </span>
+                                    до
+                                    <span class="fw-500">
+                                        3500
+                                    </span>
+                                    рублей
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- block -->
+                        <div class="d-flex flex-column delivery-info__cost-block">
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-500">
+                                    В пределах
+                                    <br>
+                                    МКАД
+                                </p>
+                            </div>
+
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-300">
+                                    Бесплатно - при заказе от
+                                    <span class="fw-500">
+                                        3500
+                                    </span>
+                                    рублей
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex flex-column delivery-info__cost-block">
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-500">
+                                    В пределах м. Дубровка
+
+                                    и м. Автозаводская
+                                </p>
+                            </div>
+
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-300">
+                                    Бесплатно - при заказе от
+                                    <span class="fw-500">
+                                        2500
+                                    </span>
+                                    рублей
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column delivery-info__cost-block">
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-500">
+                                    от МКАД
+                                    <br>
+                                    до ММК
+                                </p>
+                            </div>
+
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-300">
+                                    <span class="fw-500">
+                                        300
+                                    </span>
+                                    рублей +
+                                    <span class="fw-500">
+                                        50
+                                    </span>
+                                    рублей за каждый км от МКАДа
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex flex-column delivery-info__cost-block">
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-500">
+                                    от МКАД
+                                    <br>
+                                    до ММК
+                                </p>
+                            </div>
+
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-300">
+                                    Бесплатно - при заказе от
+                                    <span class="fw-500">
+                                        8500
+                                    </span>
+                                    рублей
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column delivery-info__cost-block">
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-500">
+                                    Cамовывоз из Велозаводского рынка
+                                </p>
+                            </div>
+
+                            <div class="delivery-info__cost-block-part">
+                                <p class="text-center fw-300">
+                                    <span class="fw-500">
+                                        Бесплатно,
+                                    </span>
+                                    без минимального заказа
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="delivery-info__map">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac6525aa9a32397192e70cbb6e91936951eeef3fce91a02e11e4c4185a495a7a2&amp;source=constructor"
+                            width="1028" height="366" frameborder="0"></iframe>
+                    </div>
+
+
+                    <div class="delivery-info__content-block">
+                        <h3>
+                            Сохранность свежести продуктов
+                        </h3>
+
+                        <p>
+                            При хранении товаров и комплектовании заказов мы учитываем
+                            <span class="fw-600">принципы соседства</span>,
+                            <span class="fw-600">температурные режимы</span> и
+                            <span class="fw-600">особенности условий хранения</span>,
+                            чтобы вы всегда получали самые свежие и вкусные продукты. Мы уделяем особое внимание
+                            <span class="fw-600">упаковке продуктов</span>
+                            и развозим заказы в специально оборудованных
+                            машинах с холодильными камерами, чтобы каждый из них был доставлен в целости и сохранности в
+                            удобное для вас место, будь то <span class="fw-600">дом</span>, <span
+                                class="fw-600">офис</span> или <span class="fw-600">дача</span>.
+                        </p>
+                    </div>
+
+
+                    <div class="delivery-info__content-block">
+                        <h3>
+                            Фактическая стоимость
+                        </h3>
+
+                        <p>
+                            Фактическая стоимость заказа в онлайн-магазине может отличаться от предварительной в случае:
+                        </p>
+
+                        <ul class="delivery-info__content-block-list dotted-list">
+                            <li class="fw-300">
+                                Замены или отсутствия некоторых товаров
+                            </li>
+
+                            <li class="fw-300">
+                                Замены или отсутствия некоторых товаров
+                            </li>
+                        </ul>
+
+                        <p>
+                            Доставка в продуктоматы, где вы можете забрать свой заказ самостоятельно в любое удобное
+                            время.
+                        </p>
+                    </div>
+
+
+                    <div class="delivery-info__content-block">
+                        <h3>
+                            Получение заказа
+                        </h3>
+
+                        <div class="cart-warning d-flex jc-between">
+                            <img src="img/icons/info_icon.svg" alt="info">
+
+                            <p>
+                                К заказу прилагаются <span class="fw-500">товарная накладная</span>, <span
+                                    class="fw-500">кассовый чек</span> и <span class="fw-500">слип</span> ( при оплате
+                                пластиковой картой ).
+                            </p>
+                        </div>
+
+                        <p>
+                            Если вы не сможете принять заказ в обозначенное время, то у вас есть возможность отменить
+                            его или выбрать другое время доставки продуктов из интернет-магазина. Для этого, пожалуйста,
+                            позвоните в контакт-центр по телефону
+                        </p>
+
+                        <a href="tel:+70663641919" class="fw-600">
+                            + 7 (066) 364 19 19
+                        </a>
+
+                        <p>
+                            Вы можете отказаться от всего заказа или части доставленных товаров без объяснения причин.
+                            Для этого необходимо подписать два экземпляра <span class="fw-600">товарной накладной</span>
+                            с пометкой водителя-экспедитора об отказе.
+                        </p>
+
+                        <p>
+                            Бесплатная доставка продуктов в пределах МКАД осуществляется при заказе на общую сумму от
+                            <span class="fw-600">3 000</span> рублей.
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        try {
+            console.log('as');
+            const allFilters = document.querySelectorAll(".filter_block__heading");
+            const allFiltersPoints = document.querySelectorAll(".filter_block__points");
+            allFilters.forEach((filter) => {
+                filter.addEventListener("click", (e) => {
+                    allFiltersPoints.forEach((points) => {
+                        if (
+                            points.closest(".filter_block") === filter.closest(".filter_block")
+                        ) {
+                            filter.parentElement.classList.toggle("show");
+                        }
+                    });
+                });
+            });
+        } catch (e){
+            console.log(e);
+        }
+
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="js/slider-settings.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
