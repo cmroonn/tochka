@@ -3385,35 +3385,32 @@ textarea {
     .sales-section__heading {
       text-align: center; } }
 
-.sales-section__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 14px;
-  -moz-column-gap: 14px;
-  column-gap: 14px;
-  row-gap: 14px; }
-  @media screen and (max-width: 768px) {
-    .sales-section__items {
-      grid-template-columns: 1fr; } }
-
 .sales-section__item {
   height: 359px;
   background-size: cover;
   background-position: center center;
   padding: 45px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
-  position: relative; }
+  position: relative;
+  width: -webkit-calc((100% / 2) - 9px);
+  width: calc((100% / 2) - 9px);
+  margin-right: 14px;
+  margin-bottom: 14px; }
+  .sales-section__item:nth-child(2n) {
+    margin-right: 0; }
   @media screen and (max-width: 768px) {
     .sales-section__item {
       padding: 25px;
-      height: 260px; } }
+      height: 260px;
+      width: 100%;
+      margin-right: 0; } }
   @media screen and (max-width: 500px) {
     .sales-section__item {
       height: 200px; } }
