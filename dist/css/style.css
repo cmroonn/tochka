@@ -4214,7 +4214,8 @@ textarea {
       z-index: 2;
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
-      transition: 0.2s; }
+      transition: 0.2s;
+      display: none; }
       .catalog__content__filters .catalog__btnFilters {
         display: -webkit-box;
         display: -webkit-flex;
