@@ -4195,7 +4195,20 @@ textarea {
 
 .catalog__brands__head__btn {
   margin-left: auto;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .catalog__brands__head__btn.rotated {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
 
 .catalog__content__filters {
   max-width: 258px;
@@ -4605,12 +4618,31 @@ textarea {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
   @media screen and (max-width: 992px) {
     .catalog__brands-wrap {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
+  .catalog__brands-wrap.active {
+    min-height: 87px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    padding: 15px; }
+    @media screen and (max-width: 1170px) {
+      .catalog__brands-wrap.active {
+        height: 227px; } }
+    @media screen and (max-width: 550px) {
+      .catalog__brands-wrap.active {
+        height: 440px; } }
 
 .catalog__brands-wrap__item {
   width: -webkit-calc(100% / 8);
@@ -4629,10 +4661,16 @@ textarea {
   justify-content: center;
   padding: 15px;
   height: 100%;
-  height: 87px; }
+  height: 87px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
   .catalog__brands-wrap__item:hover {
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
   .catalog__brands-wrap__item img {
     max-width: 95%; }
   @media screen and (max-width: 992px) {
