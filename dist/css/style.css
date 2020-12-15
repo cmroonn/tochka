@@ -4791,7 +4791,9 @@ textarea {
   -ms-flex-pack: center;
   justify-content: center;
   width: 125px;
-  height: 40px; }
+  height: 40px;
+  border-radius: 555px;
+  margin-right: 8px; }
 
 .catalog__content__filters__buttons__show {
   background: #141414;
@@ -4810,7 +4812,8 @@ textarea {
   -ms-flex-pack: center;
   justify-content: center;
   width: 125px;
-  height: 40px; }
+  height: 40px;
+  border-radius: 555px; }
 
 @media screen and (max-width: 1170px) {
   .filter_block_wrap {
