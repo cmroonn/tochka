@@ -308,6 +308,12 @@
                                 выложить товар, и отдать ЭКО сумку курьеру, для сохранения ее для следующих ваших покупок
                             </div>
                         </div>
+
+                        <button class="catalog__brands__head__btn">
+                            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5" d="M15 8L8 2L1 8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </div>
 
                     <div class="catalog__brands-wrap">
@@ -414,184 +420,196 @@
                     <!-- filters -->
                     <div class="catalog__content__filters">
                         <button type="button" class="catalog__btnFilters">Закрыть</button>
-                        <!-- active filters -->
-                        <div class="catalog__content__filters__active">
-                            <div class="active_filter">
-                                <p>Цена</p>
 
-                                <span> 500 - 1500 Р </span>
+                        <div class="filter_block_wrap">
+                            <!-- active filters -->
+                            <div class="catalog__content__filters__active">
+                                <div class="active_filter">
+                                    <p>Цена</p>
 
-                                <button class="active_filter__remove">
-                                    <svg
-                                            width="10"
-                                            height="10"
-                                            viewBox="0 0 10 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g opacity="0.3">
-                                            <path
-                                                    d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
-                                                    fill="#393840"
-                                            ></path>
-                                            <path
-                                                    d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
-                                                    fill="#393840"
-                                            ></path>
-                                        </g>
+                                    <span> 500 - 1500 Р </span>
+
+                                    <button class="active_filter__remove">
+                                        <svg
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 10 10"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g opacity="0.3">
+                                                <path
+                                                        d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
+                                                        fill="#393840"
+                                                ></path>
+                                                <path
+                                                        d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
+                                                        fill="#393840"
+                                                ></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="active_filter">
+                                    <p>Объем</p>
+
+                                    <span> 25 - 45 ml </span>
+
+                                    <button class="active_filter__remove">
+                                        <svg
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 10 10"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g opacity="0.3">
+                                                <path
+                                                        d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
+                                                        fill="#393840"
+                                                ></path>
+                                                <path
+                                                        d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
+                                                        fill="#393840"
+                                                ></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="remove_all_filters">
+                                    <button class="d-flex ai-center jc-center">
+                                        <svg
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 10 10"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g opacity="0.5">
+                                                <path
+                                                        d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
+                                                        fill="#393840"
+                                                ></path>
+                                                <path
+                                                        d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
+                                                        fill="#393840"
+                                                ></path>
+                                            </g>
+                                        </svg>
+
+                                        Сбросить всё
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- all filters -->
+                            <div class="filter_block">
+                                <p class="d-flex ai-center jc-between filter_block__heading">
+                                    Бренд
+
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
                                     </svg>
-                                </button>
+
+                                </p>
+
+                                <div class="filter_block__points">
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Марс </span>
+                                    </label>
+
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Сникерс </span>
+                                    </label>
+
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Баунти </span>
+                                    </label>
+
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Киндер </span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="active_filter">
-                                <p>Объем</p>
 
-                                <span> 25 - 45 ml </span>
+                            <div class="filter_block">
+                                <p class="d-flex ai-center jc-between filter_block__heading">
+                                    Цена (₽)
 
-                                <button class="active_filter__remove">
-                                    <svg
-                                            width="10"
-                                            height="10"
-                                            viewBox="0 0 10 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g opacity="0.3">
-                                            <path
-                                                    d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
-                                                    fill="#393840"
-                                            ></path>
-                                            <path
-                                                    d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
-                                                    fill="#393840"
-                                            ></path>
-                                        </g>
-                                    </svg>
-                                </button>
-                            </div>
-
-                            <div class="remove_all_filters">
-                                <button class="d-flex ai-center jc-center">
-                                    <svg
-                                            width="10"
-                                            height="10"
-                                            viewBox="0 0 10 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g opacity="0.5">
-                                            <path
-                                                    d="M9.61748 7.77049C10.1275 8.28052 10.1275 9.10744 9.61748 9.61748C9.10744 10.1275 8.28052 10.1275 7.77048 9.61748L0.382525 2.22951C-0.127508 1.71948 -0.127508 0.892556 0.382524 0.382524C0.892556 -0.127508 1.71948 -0.127508 2.22951 0.382524L9.61748 7.77049Z"
-                                                    fill="#393840"
-                                            ></path>
-                                            <path
-                                                    d="M2.22951 9.61748C1.71948 10.1275 0.892556 10.1275 0.382524 9.61748C-0.127508 9.10744 -0.127508 8.28052 0.382525 7.77048L7.77048 0.382525C8.28052 -0.127507 9.10744 -0.127507 9.61748 0.382525C10.1275 0.892558 10.1275 1.71948 9.61748 2.22952L2.22951 9.61748Z"
-                                                    fill="#393840"
-                                            ></path>
-                                        </g>
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
                                     </svg>
 
-                                    Сбросить всё
-                                </button>
-                            </div>
-                        </div>
+                                </p>
 
-                        <!-- all filters -->
+                                <div class="filter_block__points">
+                                    <div class="filter_block__slider">
+                                        <div id="slider-price"></div>
 
-                        <div class="filter_block">
-                            <p class="d-flex ai-center jc-between filter_block__heading">
-                                Бренд
-
-                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
-                                </svg>
-
-                            </p>
-
-                            <div class="filter_block__points">
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Марс </span>
-                                </label>
-
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Сникерс </span>
-                                </label>
-
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Баунти </span>
-                                </label>
-
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Киндер </span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="filter_block">
-                            <p class="d-flex ai-center jc-between filter_block__heading">
-                                Цена
-
-                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
-                                </svg>
-
-                            </p>
-
-                            <div class="filter_block__points">
-                                <div class="filter_block__slider">
-                                    <div id="slider-price"></div>
-
-                                    <div class="filter_block__slider__res">
-                                        <input id="price-min" readonly>
-                                        –
-                                        <input id="price-max" readonly>
+                                        <div class="filter_block__slider__res">
+                                            <input id="price-min" readonly>
+                                            –
+                                            <input id="price-max" readonly>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="filter_block show">
+                                <p class="d-flex ai-center jc-between filter_block__heading">
+                                    Харкатеристика
+
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
+                                    </svg>
+
+                                </p>
+
+                                <div class="filter_block__points">
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Фермерская </span>
+                                    </label>
+
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Кошерная </span>
+                                    </label>
+
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Халяль </span>
+                                    </label>
+
+                                    <label class="checkbox filter_block__point">
+                                        <input type="checkbox" name="size" />
+
+                                        <span> Без лактозы </span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="filter_block show">
-                            <p class="d-flex ai-center jc-between filter_block__heading">
-                                Харкатеристика
+                        <div class="catalog__content__filters__buttons">
+                            <button class="catalog__content__filters__buttons__clear">
+                                Сбросить
+                            </button>
 
-                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7 3.34638L1.67455 8L0 6.11692L7 0L14 6.11692L12.3254 8L7 3.34638Z" fill="#404040"/>
-                                </svg>
-
-                            </p>
-
-                            <div class="filter_block__points">
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Фермерская </span>
-                                </label>
-
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Кошерная </span>
-                                </label>
-
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Халяль </span>
-                                </label>
-
-                                <label class="checkbox filter_block__point">
-                                    <input type="checkbox" name="size" />
-
-                                    <span> Без лактозы </span>
-                                </label>
-                            </div>
+                            <button class="catalog__content__filters__buttons__show">
+                                Показать
+                            </button>
                         </div>
 
                     </div>
