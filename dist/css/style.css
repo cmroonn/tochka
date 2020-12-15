@@ -4572,9 +4572,9 @@ textarea {
         margin-right: 10px; } }
   @media screen and (max-width: 768px) {
     .catalog__content__prods_wrap .sales-item__product {
-      width: -webkit-calc((100% / 2) - 10px);
-      width: calc((100% / 2) - 10px);
-      margin: 0 10px 14px 0 !important; }
+      width: -webkit-calc((100% / 2) - 4px);
+      width: calc((100% / 2) - 4px);
+      margin: 0 4px 14px 0 !important; }
       .catalog__content__prods_wrap .sales-item__product:nth-child(2n) {
         margin-right: 0 !important; } }
 
