@@ -2372,8 +2372,21 @@
         try {
             var brandsBtn = document.querySelector('.catalog__brands__head__btn');
             var brandsWrap = document.querySelector('.catalog__brands-wrap');
+            var brandsWrapHeight = brandsWrap.offsetHeight;
+            console.log(brandsWrapHeight);
             brandsBtn.addEventListener('click', function() {
                 brandsWrap.classList.toggle('active');
+                if (!brandsWrap.classList.contains('active')) {
+                    for(var height = brandsWrapHeight; height >= 0; height -= 1) {
+                        brandsWrap.style.height = `${height}px`;
+                        console.log(height);
+                    }
+                } else {
+                    console.log(brandsWrapHeight);
+                    for(var height = 0; height < brandsWrapHeight; height += 1) {
+                        brandsWrap.style.height = `${height}px`;
+                    }
+                }
                 brandsBtn.classList.toggle('rotated');
             });
         } catch(e) {

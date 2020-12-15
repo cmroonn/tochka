@@ -4605,6 +4605,9 @@ textarea {
 
 .catalog__brands {
   margin-bottom: 34px; }
+  @media screen and (max-width: 550px) {
+    .catalog__brands {
+      margin-bottom: 15px; } }
 
 .catalog__brands-wrap {
   display: -webkit-box;
@@ -4619,30 +4622,20 @@ textarea {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 0;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
   overflow: hidden;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
+  padding: 0 15px; }
   @media screen and (max-width: 992px) {
     .catalog__brands-wrap {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .catalog__brands-wrap.active {
-    min-height: 87px;
     -webkit-transition: .2s;
     -o-transition: .2s;
-    transition: .2s;
-    padding: 15px; }
-    @media screen and (max-width: 1170px) {
-      .catalog__brands-wrap.active {
-        height: 227px; } }
-    @media screen and (max-width: 550px) {
-      .catalog__brands-wrap.active {
-        height: 440px; } }
+    transition: .2s; }
 
 .catalog__brands-wrap__item {
   width: -webkit-calc(100% / 8);
@@ -4664,7 +4657,8 @@ textarea {
   height: 87px;
   -webkit-transition: .2s;
   -o-transition: .2s;
-  transition: .2s; }
+  transition: .2s;
+  margin: 15px 0; }
   .catalog__brands-wrap__item:hover {
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
