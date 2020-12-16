@@ -4583,10 +4583,18 @@ textarea {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer; }
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .checkbox span {
     position: relative;
-    padding-left: 30px; }
+    padding-left: 30px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     .checkbox span:before {
       content: "";
       width: 18px;
@@ -4818,5 +4826,8 @@ textarea {
 @media screen and (max-width: 1170px) {
   .filter_block_wrap {
     overflow-y: auto;
+    scrollbar-width: none;
     max-height: -webkit-calc(100vh - 150px);
-    max-height: calc(100vh - 150px); } }
+    max-height: calc(100vh - 150px); }
+    .filter_block_wrap::-webkit-scrollbar {
+      width: 0; } }
