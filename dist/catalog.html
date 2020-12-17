@@ -623,7 +623,7 @@
 
                     <!-- products -->
                     <div class="catalog__content__prods">
-                        <button type="button" class="catalog__btnFilters">
+                        <button type="button" class="catalog__btnFilters" id="showFilters">
                             <svg
                                     width="8"
                                     height="6"
@@ -2388,6 +2388,19 @@
                     }
                 }
                 brandsBtn.classList.toggle('rotated');
+            });
+        } catch(e) {
+            console.log(e);
+        }
+
+
+        try {
+            const catalog = document.querySelector('.catalog__content__filters');
+            const showFiltersBtn = document.getElementById('showFilters');
+            document.addEventListener('click', function(event) {
+                if (event.target !== showFiltersBtn && !event.target.closest('.catalog__content__filters') && event.target !== catalog) {
+                    catalog.classList.remove('show');
+                }
             });
         } catch(e) {
             console.log(e);
